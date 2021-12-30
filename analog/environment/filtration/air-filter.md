@@ -3,10 +3,14 @@ Filter:
   * 1050+ RC 48 carbon
   * reversible flange
 
+<img src="https://m.media-amazon.com/images/I/81hOTMoN4iL._AC_SL1500_.jpg" width="214" height="141" />
+
 Fan:
 * [VIVOSUN 4" Inline Duct Fan](https://www.amazon.com/VIVOSUN-Inline-Ventilation-Variable-Controller/dp/B01DXYMGOM/)
   * variable speed controller
   * 2300RPM, 190CFM, <31dB
+
+<img src="https://m.media-amazon.com/images/I/51BNPdiRs9L._AC_SL1100_.jpg" width="214" height="160" />
 
 Fixtures/Fittings:
 * 4" x 8' collapsible shielded aluminum duct
@@ -28,4 +32,4 @@ ___
 
 \[ *note: not an affiliate or currently getting any reward for link conversion; just sharing.*
 
-*the company sells reasonably priced bundles, which work well with minimal setup* \]
+*these are things I am using that work well with minimal cost and setup* \]
