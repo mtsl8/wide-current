@@ -17,7 +17,7 @@ _[development](/digital/software/devel.md)_
 
 ### //graphics
 
-_[{intel, ati, <b>nvidia</b>}/xorg](/digital/software/graphics/current.md) . . . ([future](/digital/software/graphics/future.md))_
+_[{intel, ati, <b>nvidia</b>}/xorg](/digital/software/graphics/current.md)_ . . . ([future](/digital/software/graphics/future.md))
 
 ### //game
 
