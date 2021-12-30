@@ -1,7 +1,7 @@
 CPU: INTEL Core i5 4570
+  CORES: 4
   SOCK: LGA 1150
   CLOCK: 3.2-3.6 GHz
-  CORES: 4
   DMI: 5.0 GT/s
   TDP: 84W
 RAM: 2x 2Rx8 PC3-12800U-11-12-B1
@@ -19,7 +19,7 @@ GPU: EVGA GeForce GTX 1050 Ti SSC
   MEM: 4096MB GDDR5
   MEM-BW: 112.16 GB/s
   RES-MAX: 7680x4320@60Hz
-LAN: REALTEK RTL8151GH-CG
+LAN: GIGABIT ETHERNET
 AUDIO: IDT 92HD65C
 PSU: 460W
 
@@ -27,3 +27,7 @@ peripheral:
   keyboard: DELL L100
   mouse: CORSAIR HARPOON RGB PRO
   monitor: ACER X193W
+  
+internet:
+  up: ~12mb/s
+  down: ~60qmb/s
