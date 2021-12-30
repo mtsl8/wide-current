@@ -4,7 +4,7 @@
 
 [desktop](/digital/hardware/desktop.yaml)
 
-_[recorder](/digital/hardware/rec.yaml)_
+[recorder](/digital/hardware/rec.yaml)
 
 _[laptop](/digital/hardware/laptop.yaml)_
 
