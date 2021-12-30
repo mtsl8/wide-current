@@ -19,4 +19,4 @@ advanced:
 * plug
 * o-ring
 * patience
-* even cleaner water
+* cleaner water
