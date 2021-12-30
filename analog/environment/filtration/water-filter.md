@@ -1,4 +1,8 @@
-status: filter and spigot acquired. todo:
+status: filter and spigot acquired. 
+
+\~~~~
+
+todo:
 * check existing drill bit sizes against hardware,
 * get buckets (&bits) from hardware store 
 * drill, assemble, clean, fill
@@ -6,6 +10,10 @@ status: filter and spigot acquired. todo:
 * (stage II)
 
 ___
+
+recipe:
+
+\~~~~
 
 aka "bucket berkey":
 
@@ -22,4 +30,4 @@ stage II:
 * activated carbon
 * activated alumina
 * plug
-* o-ring
+* o-ring (for better seal)
