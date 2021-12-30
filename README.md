@@ -1,65 +1,15 @@
 # wide-current
 
-systems in active use
+__systems in active use__
 
-_works in progress_
-
-~ ~ ~
-
-[analog](#alog)
-
-[digital](#dig)
+_works in progress_ shown in italics <br/>
+(may be dead links, to be created soon)
 
 ___
 
-## <a id=alog>analog</a>
+[analog](/analog/index.md)
 
-### filtration
+[digital](/digital/index.md)
 
-[air filter](/analog/environment/filtration/air-filter.md)
 
-_[water filter](/analog/environment/filtration/water-filter.md)_
 
-### _kitchen_
-
-### _garden_
-___
-
-## <a id=dig>digital</a>
-
-### /hardware
-
-[desktop](/digital/hardware/desktop.yaml)
-
-_[recorder](/digital/hardware/rec.yaml)_
-
-_[laptop](/digital/hardware/laptop.yaml)_
-
-\______________________
-### /software
-
-_[core system](/digital/software/core-sys.md)_
-
-_[development](/digital/software/devel.md)_
-
-### //graphics
-
-_[{intel, ati, <b>nvidia</b>}/xorg](/digital/software/graphics/current.md) . . . ([future](/digital/software/graphics/future.md))_
-
-### //game
-
-_[minecraft](/digital/software/game/mc/index.md)_
-
-### //studio
-
-_[audio](/digital/software/studio/audio.md)_
-
-_[image](/digital/software/studio/image.md)_
-
-_[video](/digital/software/studio/video.md)_
-
-### //utility
-
-_[comms](/digital/software/comms.md)_
-
-_[office](/digital/software/office/index.md)_
