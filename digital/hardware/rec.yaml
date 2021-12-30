@@ -1,0 +1,25 @@
+MAKE: TASCAM
+MODEL: DR-40
+MICS: 2x cardioid condenser
+  * independent rotation
+  * safety cages
+INPUT: 2x MIC/LINE
+PREAMP: 2x w/ phantom power
+CHANNELS: 4x simultaneous record (2x stereo file)
+STORAGE: SD Card
+RATE: 44.1K/48K/96K
+FORMAT: 
+  WAV, BWF: 16/24 bit
+  MP3: 32-320k 
+OUTPUT:
+  LINE: PHONES/MONITOR
+  USB: MOUNT/DATA
+POWER:
+  * 3x AA battery
+  * power over USB
+  * AC power supply -> USB adapter
+ACCESSORY:
+  * Ulanzi MT-16 tripod
+  * windscreen
+  * case
+USER MANUAL: https://tascam.com/content/downloads/products/706/e_dr-40_om_va.pdf
