@@ -1,4 +1,4 @@
-wide-current (system installer)
+wide-current (system installer)</br>
 copyright (C) 2021 mtsl8@widemage.net
 
 This program is free software: you can redistribute it and/or modify
@@ -11,4 +11,4 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You can read a copy of the licence [here](https://www.gnu.org/licenses/gpl-3.0-standalone.html)
+You can read a copy of the licence [here](/GNU-GPL-3.0.html)
