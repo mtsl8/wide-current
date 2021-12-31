@@ -43,8 +43,10 @@ systemd-free distributions on the lighter side from Artix:
 
 ~ ~ ~
 
-* [J-core](https://j-core.org/)
-* [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - project currently [unfunded](/img/sadge-king_cookk.png) (afaik)
+VHDL: [J-core](https://j-core.org/)<br/>
+FPGA: [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - project currently [unfunded](/img/sadge-king_cookk.png) (afaik)
+
+__based__
 
 ___
 
@@ -67,7 +69,6 @@ transfer over network
 * [hg](https://www.mercurial-scm.org/) 4.9 MB / 26.0 MB
 * [git](https://git-scm.com/) 5.9 MB / 32.9 MB
 
-
 ssh
 * [dropbear](https://matt.ucc.asn.au/dropbear/dropbear.html) 
   * 233.2 KB pkg / 1.0 MB installed; deps: libxcrypt, zlib, git(make)
@@ -82,7 +83,6 @@ package management
 * [pacman](https://gitlab.archlinux.org/pacman/pacman/)
 
 toolchain
-
 * [clang](https://clang.llvm.org/) / [llvm](https://llvm.org/)
 * [gcc](https://www.gnu.org/software/gcc/) / [binutils](https://www.gnu.org/software/binutils/)
 * [musl-cross-make](https://github.com/richfelker/musl-cross-make) / [sabotage-headers](https://github.com/sabotage-linux/kernel-headers)
@@ -96,11 +96,16 @@ toolchain
 * [lamda-calculus](https://plato.stanford.edu/entries/lambda-calculus/)
 
 init
-* [mdev](https://github.com/slashbeast/mdev-like-a-boss)
+
 * [sysvinit](https://wiki.gentoo.org/wiki/Sysvinit)
+* [OpenRC](https://wiki.gentoo.org/wiki/OpenRC)
 * [runit](http://smarden.org/runit/)
 * [s6](https://www.skarnet.org/software/s6-linux-init/)
 * [suite66](https://web.obarun.org/software/66/latest/66-init.html)
+* ~ ~ ~
+* [mdev](https://github.com/slashbeast/mdev-like-a-boss)
+* [eudev](https://wiki.gentoo.org/wiki/Eudev)
+* [elogind](https://wiki.gentoo.org/wiki/Elogind)
 
 boot
 * [iPXE](https://ipxe.org/)
