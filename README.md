@@ -1,6 +1,6 @@
 ## wide-current
 
-### note: this is a work in progress, use at your own risk. updated daily until stable
+### note: this is a work in progress, use at your own risk. <br/> ~ updated daily until stable ~
 
 scripts to install a simple but complete (and secure) artix-linux-zen system on a desktop hard drive.
 
