@@ -27,7 +27,7 @@
 
 ___
 
-systemd-free distributions on the lighter side from Artix (getting lighter):
+systemd-free distributions on the lighter side from Artix:
 
 [glibc](https://www.gnu.org/software/libc/) based: 
 * [Devuan](https://www.devuan.org/) - Debian based (recent)
