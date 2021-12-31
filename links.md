@@ -51,22 +51,23 @@ aka ~ util-linux
 * [cygwin](https://www.cygwin.com/)
 
 shell
-* [dash](http://gondor.apana.org.au/~herbert/dash/)
-* [bash](https://tiswww.case.edu/php/chet/bash/bashtop.html)
-* [zsh](https://www.zsh.org/)
+* [dash](http://gondor.apana.org.au/~herbert/dash/) 82.6 KB / 149.8 KB
+* [bash](https://tiswww.case.edu/php/chet/bash/bashtop.html) 1.6 MB / 8.2 MB
+* [zsh](https://www.zsh.org/) 2.1 MB / 6.2 MB
 
 transfer over network
-* [curl](https://curl.se/)
-* [rsync](https://rsync.samba.org/)
-* [git](https://git-scm.com/)
-* [hg](https://www.mercurial-scm.org/)
-* [wget](https://www.gnu.org/software/wget/)
+* [rsync](https://rsync.samba.org/) 308.3 KB / 579.8 KB
+* [curl](https://curl.se/) 1.1 MB / 1.8 MB
+* [wget](https://www.gnu.org/software/wget/) 739.1 KB / 3.1 MB
+* [hg](https://www.mercurial-scm.org/) 4.9 MB / 26.0 MB
+* [git](https://git-scm.com/) 5.9 MB / 32.9 MB
+
 
 ssh
 * [dropbear](https://matt.ucc.asn.au/dropbear/dropbear.html) 
-  * 233.2 KB pkg, 1.0 MB installed, deps: libxcrypt, zlib, git(make)
+  * 233.2 KB pkg / 1.0 MB installed; deps: libxcrypt, zlib, git(make)
 * [openssh](https://www.openssh.com/) 
-  * 1011.4 KB pkg, 5.9 MB installed, runtime deps: glibc, krb5, ldns, libxcrypt, libedit, openssl, pam, zlib 
+  * 1011.4 KB pkg / 5.9 MB installed; runtime deps: glibc, krb5, ldns, libxcrypt, libedit, openssl, pam, zlib 
 
 package management
 
