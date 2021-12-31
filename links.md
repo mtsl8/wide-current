@@ -30,6 +30,7 @@ ___
 systemd-free distributions on the lighter side from Artix:
 
 [glibc](https://www.gnu.org/software/libc/) based: 
+* [Gentoo](https://www.gentoo.org/) - source
 * [Devuan](https://www.devuan.org/) - Debian based
 * [antiX](https://antixlinux.com/) - same, but perhaps half the size
 * [LFS](https://linuxfromscratch.org/lfs/view/stable/) - build GNU/Linux completely from source, with detailed instructions
