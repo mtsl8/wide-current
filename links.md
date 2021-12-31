@@ -27,12 +27,13 @@
 
 ___
 
-Distributions on the lighter side from Artix (getting lighter):
+systemd-free distributions on the lighter side from Artix (getting lighter):
 
 [glibc](https://www.gnu.org/software/libc/) based: 
-* [antiX](https://antixlinux.com/) - Debian based (recent)
+* [devuan](ttps://www.devuan.org/) - Debian based (recent)
+* [antiX](https://antixlinux.com/) - same, but perhaps half the size
 * [LFS](https://linuxfromscratch.org/lfs/view/stable/) - build GNU/Linux completely from source, with detailed instructions (recent)
-* [CLFS](http://clfs.org/view/CLFS-3.0.0-SYSVINIT/x86_64-64/) - simpler than LFS (stale ~ 2014)
+* [CLFS](http://clfs.org/view/CLFS-3.0.0-SYSVINIT/x86_64-64/) - simpler system than LFS (stale ~ 2014)
 
 [musl](https://git.musl-libc.org/cgit/musl/) based:
 * [Adélie](https://git.adelielinux.org/adelie?sort=latest_activity_desc)
@@ -98,6 +99,7 @@ init
 * [suite66](https://web.obarun.org/software/66/latest/66-init.html)
 
 boot
+* [iPXE](https://ipxe.org/)
 * [coreboot](https://coreboot.org/)
 * [heads](https://osresearch.net/)
 * [rEFInd](http://www.rodsbooks.com/refind/)
