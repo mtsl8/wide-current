@@ -30,9 +30,9 @@ ___
 systemd-free distributions on the lighter side from Artix:
 
 [glibc](https://www.gnu.org/software/libc/) based: 
-* [Devuan](https://www.devuan.org/) - Debian based (recent)
+* [Devuan](https://www.devuan.org/) - Debian based
 * [antiX](https://antixlinux.com/) - same, but perhaps half the size
-* [LFS](https://linuxfromscratch.org/lfs/view/stable/) - build GNU/Linux completely from source, with detailed instructions (recent)
+* [LFS](https://linuxfromscratch.org/lfs/view/stable/) - build GNU/Linux completely from source, with detailed instructions
 * [CLFS](http://clfs.org/view/CLFS-3.0.0-SYSVINIT/x86_64-64/) - simpler system than LFS (stale ~ 2014)
 
 [musl](https://git.musl-libc.org/cgit/musl/) based:
@@ -90,6 +90,7 @@ toolchain
 * [lamda-calculus](https://plato.stanford.edu/entries/lambda-calculus/)
 
 init
+* [mdev](https://github.com/slashbeast/mdev-like-a-boss)
 * [sysvinit](https://wiki.gentoo.org/wiki/Sysvinit)
 * [runit](http://smarden.org/runit/)
 * [s6](https://www.skarnet.org/software/s6-linux-init/)
