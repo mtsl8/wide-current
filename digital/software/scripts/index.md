@@ -20,7 +20,7 @@ ___
 
 #### 1. prepare installation:
 
-download this repository
+download the latest release of this repository. 
 
 edit the .conf files directly or use your own. directions in the comments
 
