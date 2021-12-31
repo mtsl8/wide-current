@@ -14,25 +14,24 @@
   * wifi is not difficult to set up, but not currently supported. 
 [(reason1)](/digital/emag-health.md) [(reason2)](/ditital/wireless/limitations.md)
 
-* currently defaults to Nvidia proprietary drivers (which make a mess of things but support inexpensive GPUs)
-* using intel or amd drivers is a relatively simple change; options provided in _main.conf_
+* currently defaults to nvidia proprietary drivers
+  * using intel or amd drivers is a relatively simple change; options provided in _main.conf_
 ___
 
 #### 1. prepare installation:
 
-download the latest release of this repository. 
-
-edit the .conf files directly or use your own. directions in the comments
+* download the latest "-install" [release](/https://github.com/mtsl8/wide-current/releases) of this repository. 
+* edit the .conf files directly or use your own. (directions in the comments)
 
 #### 2. prepare drive:
 
-_format.sh_: creates new GPT partition table and uses the settings in<br/>
-_format.conf_ to create, format and label the required partitions.
+_format.sh_: creates a new GPT partition table and uses the settings in<br/>
+ _format.conf_ to create, format and label the required partitions.
 
 #### 3. mount and install base system
 
-_bootstrap.sh_: connects to the internet, mounts newly created filesystem,<br/> 
-(downloads/verifies/) installs system binaries, and chroots into the new installation.
+_bootstrap.sh_: connects to the internet, mounts the newly created filesystem,<br/> 
+(downloads, verifies, &) installs system binaries, and chroots into the new installation.
 
 #### 4. set up and populate new base system
 
