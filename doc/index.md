@@ -1,31 +1,35 @@
 ## software
 
-[core system](/digital/software/core-sys.md)
+[core system](/doc/core-sys.md)
 
-[development](/digital/software/devel.md)
+[development](/doc/devel.md)
 
 ### graphics
 
-[{intel, ati, <b>nvidia</b>}/xorg](/digital/software/graphics/current.md) . . . _([future](/digital/software/graphics/future.md))_
+[{intel, ati, <b>nvidia</b>}/xorg](/doc/graphics.md) 
+
+_[(future)](/doc/graphics-future.md)_
 
 ### utility
 
-_[comms](/digital/software/comms.md)_
+_[web](/doc/web.md)_
 
-_[office](/digital/software/office/index.md)_
+_[comms](/doc/comms.md)_
+
+_[office](/doc/office.md)_
 
 ### game
 
-[minecraft](/digital/software/game/mc/index.md)
+[minecraft](/doc/mc.md)
 
 ### studio
 
-[broadcast](/doc/studio-obs.md)
+[broadcast](/doc/obs.md)
 
-_[audio](/doc//audio.md)_
+_[audio](/doc/audio.md)_
 
-_[image](/digital/software/studio/image.md)_
+_[image](/doc/image.md)_
 
-_[video](/digital/software/studio/video.md)_
+_[video](/doc/video.md)_
 
 
