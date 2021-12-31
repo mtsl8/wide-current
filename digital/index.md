@@ -1,14 +1,5 @@
 ## digital
 
-### /hardware
-
-[desktop](/digital/hardware/desktop.yaml)
-
-[recorder](/digital/hardware/rec.yaml)
-
-_[laptop](/digital/hardware/laptop.yaml)_
-
-\______________________
 ### /software
 
 _[core system](/digital/software/core-sys.md)_
