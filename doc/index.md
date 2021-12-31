@@ -6,7 +6,7 @@
 
 ### graphics
 
-[{intel, ati, <b>nvidia</b>}/xorg](/doc/graphics.md) 
+[{intel, amd, <b>nvidia</b>}/xorg](/doc/graphics.md) 
 
 _[(future)](/doc/graphics-future.md)_
 
@@ -14,9 +14,9 @@ _[(future)](/doc/graphics-future.md)_
 
 _[web](/doc/web.md)_
 
-_[comms](/doc/comms.md)_
-
 _[office](/doc/office.md)_
+
+_[comms](/doc/comms.md)_
 
 ### game
 
@@ -31,5 +31,3 @@ _[audio](/doc/audio.md)_
 _[image](/doc/image.md)_
 
 _[video](/doc/video.md)_
-
-
