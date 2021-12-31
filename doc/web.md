@@ -12,14 +12,17 @@
 
 all available in the artix [universe repository](https://gitea.artixlinux.org/Universe/) :
 
-_(note: firedragon only appears on mirror, no PKGBUILD listed; see [here](https://aur.archlinux.org/packages/firedragon/) for likely build instructions)_
-
 /etc/pacman.conf:
 
 ```
 [universe]
 Server = https://universe.artixlinux.org/$arch
 ```
+
+* _(note: firedragon only appears on mirror, no PKGBUILD listed; see [here](https://aur.archlinux.org/packages/firedragon/) for likely build instructions)_
+
+* _(nnote: artix universe gitea is a bit out of sync with the mirror; mirror appears to be_ more _up to date)_
+
 ___
 
 \* included in default web.conf
