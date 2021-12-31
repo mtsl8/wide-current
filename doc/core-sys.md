@@ -19,4 +19,4 @@
 * __bootloader__
   * grub efibootmgr 
 
-### [Scripts](/digital/software/scripts/index.md)
+### [Scripts](/scripts/index.md)
