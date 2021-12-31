@@ -41,6 +41,17 @@ _setup.sh_:
 
 sets up clock, localization, hosts & hostname, network,<br/>
 root password, sudo, primary user and password.<br/>
-installs core utility software and bootloader, then reboots.
 
-#### 5. install {display, video, audio} {drivers, frameworks}
+installs toolchain, core software, and bootloader;<br/>
+then reboots from disk into the newly created system.
+
+___
+
+at this point the system may diverge somewhat depending on your specific hardware and intended use.
+
+5. install {display, video, audio} {drivers, frameworks, configuration tools}
+6. install login manager, window manager, and desktop environment
+7. install text editor, office software, email client, web browser (+plugins)
+8. install openjre, multi-mc (fabric-api, starlight, iris, sodium, lithium, ferritecore, ...and more)
+9. install obs-studio (with browser and vst plugins)
+10. more to come soon...
