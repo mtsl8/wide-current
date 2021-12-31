@@ -20,7 +20,7 @@ ___
 
 #### 1. prepare installation:
 
-download this repository (get only the relevant parts via default .gitignore)
+download this repository
 
 edit the .conf files directly or use your own. directions in the comments
 
