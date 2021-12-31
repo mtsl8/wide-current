@@ -20,8 +20,12 @@ ___
 
 #### 1. prepare installation:
 
-* download the latest "-install" [release](/https://github.com/mtsl8/wide-current/releases) of this repository. 
-* edit the .conf files directly or use your own. (directions in the comments)
+* clone this repository: [(git)](https://github.com/mtsl8/wide-current.git)
+  * _future: download the latest "-install" [release](/https://github.com/mtsl8/wide-current/releases) of this repository._
+  * _in the mean time apologies for un-useful "website" files; they are all text==lightweight_
+* cd wide-current/digital/config/
+  * edit the .conf files directly or use your own. (directions in the comments)
+* cd ../script/
 
 #### 2. prepare drive:
 
@@ -37,10 +41,8 @@ _bootstrap.sh_: connects to the internet, mounts the newly created filesystem,<b
 
 _setup.sh_: 
 
-sets up clock, localization, hosts & hostname, dhcpc and network manager,<br/>
+sets up clock, localization, hosts & hostname, network,<br/>
 root password, sudo, primary user and password.<br/>
-installs core software and bootloader, then reboots.
+installs core utility software and bootloader, then reboots.
 
 #### 5. install {display, video, audio} {drivers, frameworks}
-
-_
