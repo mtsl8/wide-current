@@ -97,6 +97,7 @@ toolchain
 * [Rust](https://www.rust-lang.org/) / cargo
 * [C++](https://isocpp.org/)
 * [__C__](http://www.open-std.org/jtc1/sc22/wg14/)
+* assembly, interrupts, CMOS, TTL, PWM, [Quartz](https://www.avrfreaks.net/sites/default/files/introductionquartz.pdf), metal, current
 * [transistor](https://en.wikipedia.org/wiki/Transistor)
 * [lisp](https://lisp-lang.org/)
 * [lamda-calculus](https://plato.stanford.edu/entries/lambda-calculus/)
