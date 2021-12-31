@@ -16,5 +16,5 @@ I will not personally support features I don't use, for the simple reason that I
 
 recommended reading: [\\(o)-(o)/](/links.md) </br>
 this is the deep end, jump in at your own responsibility.</br>
-that said, I will do my best to help if you [contact](/doc/contact.md) me with clear questions and/or clear data. </br>
+that said, I will do my best to help if you [contact](/contact.md) me with clear questions and/or clear data. </br>
 that said, I also take no responsibility or liability for what you do with your computer. see [license](/LICENSE.md)
