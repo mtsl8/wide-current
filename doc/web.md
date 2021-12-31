@@ -1,6 +1,6 @@
-* blink:
-  * [brave-bin](https://gitea.artixlinux.org/Universe/brave/src/branch/main/PKGBUILD)^
-  * [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium)*^
+* blink:^
+  * [brave-bin](https://gitea.artixlinux.org/Universe/brave/src/branch/main/PKGBUILD)
+  * [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium)*
 * gecko:
   * [firefox-esr](https://gitea.artixlinux.org/Universe/firefox-esr)
   * [librewolf](https://librewolf.net/)* (privacy-oriented fork of firefox)
