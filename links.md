@@ -1,16 +1,16 @@
 [Artix](https://artixlinux.org/) - _The Art of Linux_ - Simple. Fast. Systemd-free
 
-(open-init, privacy conscious fork of:)
+( ... open-init, developer-conscious fork of: ... )
 
 [Arch](https://archlinux.org/) - A simple, lightweight distribution
 
-(rolling release, binary distribution of:)
+( ... rolling release, binary distribution of: ... )
 
 [Linux](https://www.kernel.org/) - a clone of Unix, written from scratch
 
-(runtime operating systems and firmware (canonically) compiled and utilized by:)
+( ... runtime operating systems, I/O, drivers and device firmware \[canonically\] compiled and utilized by: ... )
 
-[GNU](https://www.gnu.org/software/software.html) - a powerful collection of open-source tools, including but not limited to:
+[GNU](https://www.gnu.org/software/software.html) - a powerful collection of open-source tools, including:
 
 * grub
 * coreutils
@@ -44,7 +44,7 @@ systemd-free distributions on the lighter side from Artix:
 ~ ~ ~
 
 VHDL: [J-core](https://j-core.org/)<br/>
-FPGA: [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - project currently [unfunded](/img/sadge-king_cookk.png) (afaik)
+FPGA: [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - project currently [unfun](/img/sadge-king_cookk.png)ded (afaik)
 
 __based__
 
@@ -86,10 +86,15 @@ toolchain
 * [clang](https://clang.llvm.org/) / [llvm](https://llvm.org/)
 * [gcc](https://www.gnu.org/software/gcc/) / [binutils](https://www.gnu.org/software/binutils/)
 * [musl-cross-make](https://github.com/richfelker/musl-cross-make) / [sabotage-headers](https://github.com/sabotage-linux/kernel-headers)
-* [python](https://www.python.org/)
+* [ninja](https://ninja-build.org/) / [meson](https://mesonbuild.com/) / [cmake](https://cmake.org/)
+* ~ ~ ~
+* [openjdk](https://openjdk.java.net/) / [Node.js](https://nodejs.org/en/) / npm
+* [python](https://www.python.org/) / pip
 * [perl](https://www.perl.org/)
 * [lua](https://www.lua.org/)
-* [Rust](https://www.rust-lang.org/)
+* ~ ~ ~
+* [Rust](https://www.rust-lang.org/) / cargo
+* [C++](https://isocpp.org/)
 * [__C__](http://www.open-std.org/jtc1/sc22/wg14/)
 * [transistor](https://en.wikipedia.org/wiki/Transistor)
 * [lisp](https://lisp-lang.org/)
