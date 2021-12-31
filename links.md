@@ -77,12 +77,9 @@ package management
 
 toolchain
 
-* [clang](https://clang.llvm.org/)
-* [llvm](https://llvm.org/)
-* [gcc](https://www.gnu.org/software/gcc/)
-* [binutils](https://www.gnu.org/software/binutils/)
-* [musl-cross-make](https://github.com/richfelker/musl-cross-make)
-* [sabotoge-headers](https://github.com/sabotage-linux/kernel-headers)
+* [clang](https://clang.llvm.org/) / [llvm](https://llvm.org/)
+* [gcc](https://www.gnu.org/software/gcc/) / [binutils](https://www.gnu.org/software/binutils/)
+* [musl-cross-make](https://github.com/richfelker/musl-cross-make) / [sabotoge-headers](https://github.com/sabotage-linux/kernel-headers)
 * [python](https://www.python.org/)
 * [perl](https://www.perl.org/)
 * [lua](https://www.lua.org/)
