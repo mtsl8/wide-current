@@ -4,7 +4,7 @@
 
 scripts to install a simple but complete (and secure) artix-linux-zen system on a desktop hard drive.
 
-there will also be scripts to assist in downloading and installing everything needed to launch fabric modded minecraft, obs-studio (with streamelements/browser integration), and other tools for image, video, and audio processing.
+there will also be scripts to assist in downloading and installing everything needed to launch fabric modded minecraft, obs-studio (with streamelements/browser integration), and other open source tools for image, video, and audio processing.
 
 this system is designed to be modern and fully functional while minimizing bloat and cruft, thereby gaining security and performance ~  software leverage on existing hardware. it is also designed to be easy to update, and to stay aligned with upstream whenever possible.
 
