@@ -30,7 +30,7 @@ ___
 systemd-free distributions on the lighter side from Artix (getting lighter):
 
 [glibc](https://www.gnu.org/software/libc/) based: 
-* [devuan](ttps://www.devuan.org/) - Debian based (recent)
+* [devuan](https://www.devuan.org/) - Debian based (recent)
 * [antiX](https://antixlinux.com/) - same, but perhaps half the size
 * [LFS](https://linuxfromscratch.org/lfs/view/stable/) - build GNU/Linux completely from source, with detailed instructions (recent)
 * [CLFS](http://clfs.org/view/CLFS-3.0.0-SYSVINIT/x86_64-64/) - simpler system than LFS (stale ~ 2014)
