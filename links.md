@@ -41,6 +41,11 @@ systemd-free distributions on the lighter side from Artix:
 * [sabotage](https://github.com/sabotage-linux/sabotage)
 * [mkroot](https://github.com/landley/mkroot)
 
+~ ~ ~
+
+* [J-core](https://j-core.org/)
+* [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - project currently [unfunded](/img/sadge-king_cookk.png) (afaik)
+
 ___
 
 ### Tools
