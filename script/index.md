@@ -21,9 +21,7 @@ ___
 #### 1. prepare installation:
 
 * clone this repository: [(git)](https://github.com/mtsl8/wide-current.git)
-  * _future: download the latest "-install" [release](/https://github.com/mtsl8/wide-current/releases) of this repository._
-  * _in the mean time apologies for un-useful "website" files; they are all text==lightweight_
-* cd wide-current/digital/config/
+* cd wide-current/config/
   * edit the .conf files directly or use your own. (directions in the comments)
 * cd ../script/
 
