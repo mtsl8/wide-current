@@ -12,9 +12,7 @@ see the [docs](/doc/index.md) for more info.
 
 ___
 
-I will not personally support features I don't use, for the simple reason that I can't verify their function. </br>
-... but I will do my best to make the interfaces transparent and simple to extend.</br>
-new features are being added as time and resources allow.</br>
+I will not personally support features I don't use, for the simple reason that I can't verify their function ... but I will do my best to make the interfaces transparent and simple to extend. new features are being added as time and resources allow.
 
 recommended reading: [\\(o)-(o)/](/links.md) </br>
 this is the deep end, jump in at your own responsibility.</br>
