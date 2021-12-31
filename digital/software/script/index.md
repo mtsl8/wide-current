@@ -20,8 +20,8 @@ ___
 
 #### 1. prepare installation:
 
-* clone the /dev branch of this repository: [(git)](https://github.com/mtsl8/wide-current.git)
-* cd wide-current/digital/config/
+* clone this repository: [(git)](https://github.com/mtsl8/wide-current.git)
+* cd wide-current/config/
   * edit the .conf files directly or use your own. (directions in the comments)
 * cd ../script/
 
