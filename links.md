@@ -12,18 +12,7 @@
 
 [GNU](https://www.gnu.org/software/software.html) - a powerful collection of open-source tools, including:
 
-* grub
-* coreutils
-* bash
-* grep
-* nano
-* gnutls
-* binutils
-* bison
-* glibc
-* gcc
-* make
-* autoconf/automake
+* grub, coreutils, bash, grep, nano, gnutls, binutils, bison, glibc, gcc, make, autoconf/automake
 
 ___
 
