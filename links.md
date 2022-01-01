@@ -34,9 +34,7 @@ systemd-free distributions on the lighter side from Artix:
 ~ ~ ~
 
 VHDL: [J-core](https://j-core.org/)<br/>
-FPGA: [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - _project currently [unfunded](/img/sadge-king_cookk.png) (afaik)_
-
-__based__
+FPGA: [turtle-board](https://www.cnx-software.com/2017/03/13/turtle-board-is-a-raspberry-pi-2-like-fpga-board-for-j-core-j2-open-source-superh-sh2-soc/) - _project on hold/diverted (afaik)_
 
 ___
 
