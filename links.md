@@ -40,7 +40,7 @@ ___
 
 ### Tools
 
-aka ~ util-linux
+core utility
 * [toybox](https://github.com/landley/toybox)
 * [busybox](https://www.busybox.net/)
 * [cygwin](https://www.cygwin.com/)
@@ -64,7 +64,6 @@ ssh
   * 1011.4 KB pkg / 5.9 MB installed; runtime deps: glibc, krb5, ldns, libxcrypt, libedit, openssl, pam, zlib 
 
 package management
-
 * [re:clean-chroot](https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot)
 * [artools](https://gitea.artixlinux.org/artix/artools)
 * [makepkg](https://wiki.archlinux.org/title/Arch_Build_System)
