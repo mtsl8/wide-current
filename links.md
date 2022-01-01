@@ -117,7 +117,7 @@ init
 boot
 * [iPXE](https://ipxe.org/)
 * [coreboot](https://coreboot.org/)
-* [heads](https://osresearch.net/)
+* [Heads:ROM](https://osresearch.net/)
 * [rEFInd](http://www.rodsbooks.com/refind/)
 * [grub](https://www.gnu.org/software/grub/)
 * [mkinitcpio](https://wiki.archlinux.org/title/Mkinitcpio)
