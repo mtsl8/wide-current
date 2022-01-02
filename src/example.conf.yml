@@ -36,9 +36,7 @@ PART:
   BOOT: 550
   # GB:
   SWAP: 18
-  # GB:
   ROOT: 100
-  # GB:
   HOME: 100
 
 # encryption
@@ -47,12 +45,6 @@ CRYPT:
   HOME: false
 
 #####CORE-SYS#####
-
-# selected options are recommended/supported and tested to work
-# other options listed are in the artix repository, not tested by me
-# nvidia display drivers differ by kernel, as do other things
-# casually switching init after installing will break your system
-# see: https://wiki.artixlinux.org/Main/SwitchInit
 
 BASE:
   # linux-zen | linux | linux-lts | linux-hardened
