@@ -25,6 +25,14 @@ ___
   * edit the .conf files directly or use your own. (directions in the comments)
 * cd ../script/
 
+```
+# selected options are recommended/supported and tested to work
+# other options listed are in the artix repository, not tested by me
+# nvidia display drivers differ by kernel, as do other things
+# casually switching init after installing will break your system
+# see: https://wiki.artixlinux.org/Main/SwitchInit
+```
+
 #### 2. prepare drive:
 
 _format.sh_: creates a new GPT partition table and uses the settings in<br/>
