@@ -11,4 +11,4 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-_You can read a full copy of the licence [here.](/gpl-3.0.md)_
+_You can read a full copy of the licence [here.](/license/gpl-3.0.md)_
