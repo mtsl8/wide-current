@@ -18,7 +18,7 @@ BOOT:
   # is secure boot enabled?
   SECURE: false
   # boot only signed images?
-  SIGNED: false
+  #SIGNED: false
   # set to false to install alongside existing OS:
   PRIMARY: true
   # show GRUB menu?
@@ -29,18 +29,19 @@ BOOT:
 ## partitions
 PART:
   # MB:
-  BOOT: 550
+  BOOT: 100
   # GB:
   SWAP: 18
   ROOT: 100
   HOME: 100
   # encryption
-  CRYPT:
-    ROOT: false
-    HOME: false
+  #CRYPT:
+  # SWAP: false
+  # ROOT: false
+  # HOME: false
 
-## OS
-  
+## OS ##
+
 BASE:
   # linux-zen | linux | linux-lts | linux-hardened
   KERNEL: linux-zen
