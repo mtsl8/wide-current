@@ -51,7 +51,7 @@ CRYPT:
 # selected options are recommended/supported and tested to work
 # other options listed are in the artix repository, not tested by me
 # nvidia display drivers differ by kernel, as do other things
-# switching init after installing is likely to break your system
+# casually switching init after installing will break your system
 # see: https://wiki.artixlinux.org/Main/SwitchInit
 
 BASE:
