@@ -1,0 +1,63 @@
+#####HARDWARE#####
+
+## machine
+MACH:
+  # intel | amd
+  CPU: intel
+  THREADS: 4
+  # GB installed:
+  RAM: 12
+  # root HD:
+  HD:
+    # HDD 
+    TYPE: HDD 
+    # in GB:
+    SIZE: 2000
+  # intel | nvidia | amd
+  GPU: nvidia 
+
+## drive formatting
+FMT: 
+  # safety measure
+  ASK: true
+  # prepare drive for effective encryption?
+  CLEAN: false
+  # secure erase:
+  ERASE:
+    ALL: false
+    # amount in GB to erase:
+    AMT: 250
+    # offset in MB to begin erasing from:
+    # OFF: 0
+ 
+# partitions
+PART:
+  # MB:
+  BOOT: 550
+  # GB:
+  SWAP: 18
+  # GB:
+  ROOT: 100
+  # GB:
+  HOME: 100
+
+# encryption
+CRYPT:
+  ROOT: false
+  HOME: false
+
+#####CORE-SYS#####
+
+# selected options are recommended/supported and tested to work
+# other options listed are in the artix repository, not tested by me
+# nvidia display drivers differ by kernel, as do other things
+# switching init after installing is likely to break your system
+# see: https://wiki.artixlinux.org/Main/SwitchInit
+
+BASE:
+  # linux-zen | linux | linux-lts | linux-hardened
+  KERNEL: linux-zen
+  # runit # openrc | s6-base | 66 | dinit
+  INIT: runit
+  # nano | vim
+  EDITOR: nano
