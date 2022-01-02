@@ -16,7 +16,7 @@ MACH:
   # intel | nvidia | amd
   GPU: nvidia 
 
-## drive formatting
+## format drive
 FMT: 
   # safety measure
   ASK: true
