@@ -1,0 +1,58 @@
+## machine
+MACH:
+  # intel | amd
+  CPU: intel
+  THREADS: 4
+  # GB installed:
+  RAM: 12
+  # root HD:
+  HD:
+    # HDD | SSD | NVMe
+    TYPE: HDD 
+    # in GB:
+    SIZE: 2000
+  # intel | nvidia | amd
+  GPU: nvidia 
+
+BOOT:
+  # is secure boot enabled?
+  SECURE: false
+  # boot only signed images?
+  SIGNED: false
+  # set to false to install alongside existing OS:
+  PRIMARY: true
+  # show GRUB menu?
+  MENU: false
+  # if $MENU, time delay (seconds) before autoboot?
+  DELAY: 5
+
+## partitions
+PART:
+  # MB:
+  BOOT: 550
+  # GB:
+  SWAP: 18
+  ROOT: 100
+  HOME: 100
+  # encryption
+  CRYPT:
+    ROOT: false
+    HOME: false
+
+## OS
+  
+BASE:
+  # linux-zen | linux | linux-lts | linux-hardened
+  KERNEL: linux-zen
+  # runit # openrc | s6-base | 66 | dinit
+  INIT: runit
+  # nano | vim
+  EDITOR: nano
+
+LOCAL:
+  # local host name
+  HOST: artix-zen
+  # /usr/share/zoneinfo/$REGION/$ZONE
+  REGION: US
+  ZONE: Eastern
+  LOCALES: "en_US.UTF-8"
