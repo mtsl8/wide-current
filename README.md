@@ -14,9 +14,13 @@ all of the scripts (will) reference the same core set of configuration files, an
 
 \[package managers can resolve dependencies, but they don't understand the subtleties of system design. backups are also a good idea, but not nearly as light/portable.\]
 
+___
+
 the core system is designed to be modern and fully functional while minimizing bloat and cruft, thereby gaining security and performance ~  software leverage on existing hardware. it is also designed to be easy to update, and to stay aligned with upstream whenever possible.
 
-there (will be) are scripts to assist in downloading and installing office and utility software, web browsers and email client, obs-studio (with streamelements/browser integration), everything needed to launch fabric modded minecraft, and other open source tools for image, video, and audio processing. 
+additionally, there (will be) are scripts to assist in downloading and installing office and utility software, web browsers and email client, obs-studio (with streamelements/browser integration), everything needed to launch fabric modded minecraft, and other open source tools for image, video, and audio processing. 
+
+___
 
 there is no requirement to use scripts you do not need; the latter ones are primarily just wrappers on makepkg and pacman which gather software that is known to work well together. wherever there are known complications, the scripts have "best" known solutions embedded. they also provide a common interface for logic to keep the ideal order of operations intact.
 
