@@ -1,4 +1,4 @@
-## core-sys
+## core system
 
 think of this as a cheat-sheet for installation so you don't have to wiki all over the place
 
