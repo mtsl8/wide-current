@@ -60,6 +60,7 @@ I usually use 100 if the drive is big because why not. <br>
 
 home at minimum needs to be at least enough to store user configuration and working files, so not that big really <br>
 one could use a seperate partition or drive for audio and yet another larger one for video.. for example. <br>
+
 however you want to set it up, once you get it there, you can lock it in to the [FSTAB](https://wiki.archlinux.org/title/Fstab) for automount. <br>
 (assuming the initramfs and/or udev are configured to load all the modules required to access them ~ such as for encryption)
 
