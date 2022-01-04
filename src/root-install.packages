@@ -88,17 +88,18 @@ pkgfile --update
 
 # /etc/pacman.d/hooks/nvidia.hook ~ (https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
 
-# /etc/mkinitcpio.conf ~ (MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ... )
+# /etc/mkinitcpio.conf ~ (MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
 mkinitcpio -P
 
 # cat /sys/devices/platform/efi-framebuffer.0/depth
 # look at the monitor menu and match height and width exactly
 ## alternatively use ddcutil slightly later in the process..
+
 ### todo: add numlock support
 
 # /etc/default/grub :
 # ~ (GRUB_GFXMODE="$width"x"$height"x"$depth",auto)
-# ~ (GRUB_CMDLINE_LINUX_DEFAULT=" ... nvidia-drm.modeset=1 ..."
+# ~ (GRUB_CMDLINE_LINUX_DEFAULT="... nvidia-drm.modeset=1 ..."
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # /etx/X11/xorg.conf.d/20-nvidia.conf
