@@ -69,5 +69,7 @@ startx
 [universe]
 Server = https://universe.artixlinux.org/$arch
 ```
-#### next: pipewire & audio, qt5, multi-mc
+
+#### next: pipewire & audio, qt5, multimc
 #### ffmpeg-obs, vlc-luajit, obs-studio-tytan652
+#### librewolf, thunderbird, ungoogled-chromium
