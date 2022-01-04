@@ -24,5 +24,5 @@ see the [/dev](https://github.com/mtsl8/wide-current/tree/dev) branch for next i
 
 [recommended reading](/links.md) </br>
 this is the deep end, jump in at your own responsibility.</br>
-that said, I will do my best to help if you [contact](/contact.md) me with clear questions and/or clear data. </br>
+that said, I will do my best to help if you [contact](mailto:mtsl8@widemage.net) me with clear questions and/or clear data. </br>
 that said, I also take no responsibility or liability for what you do with your computer. see [license](/LICENSE.md)
