@@ -19,9 +19,7 @@ nano sudo
 
 grub efibootmgr
 
-dhcpcd
-
-connman-runit
+dhcpcd connman-runit
 
 nftables-runit firewalld-runit
 
@@ -56,21 +54,17 @@ man-db man-pages
 
 pacman-contrib pkgfile
 
-libedit 
+libedit llvm-libs
 
-llvm-libs
-
-python
+python dkms
 
 linux-zen-headers
 
-dkms
-
 ~~~
 
-cairo
+cairo mesa
 
-mesa mesa-vdpau libva-mesa-driver
+mesa-vdpau libva-mesa-driver
 
 wayland egl-wayland
 
