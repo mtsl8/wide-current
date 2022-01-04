@@ -20,7 +20,7 @@ ___
 
 see the [docs](/doc/index.md) for more info.
 
-see the /dev branch for future plans.
+see the [/dev](https://github.com/mtsl8/wide-current/tree/dev) branch for next iteration (WIP).
 
 [recommended reading](/links.md) </br>
 this is the deep end, jump in at your own responsibility.</br>
