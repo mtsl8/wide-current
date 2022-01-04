@@ -12,7 +12,7 @@ the core system is designed to be modern and fully functional while minimizing b
 
 \[package managers can resolve dependencies, but they don't understand the subtleties of system design\]
 
-additionally, there will soon be docs to assist in with office and utility software, web browsers and email client, obs-studio (with streamelements/browser integration), everything needed to launch fabric modded minecraft, and other open source tools for image, video, and audio processing. 
+additionally, there will soon be docs to assist with installing office and utility software, web browsers and email client, obs-studio (with streamelements/browser integration), everything needed to launch fabric modded minecraft, and other open source tools for image, video, and audio processing. 
 
 (an attempt at making a complicated digital ecosystem easier for humans to manage, without taking away freedom)
 
