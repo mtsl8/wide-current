@@ -1,0 +1,73 @@
+> cmake
+> git
+
+#https://rustup.rs/
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+
+cargo build --release
+
+sudo cp /target/release/alacritty /usr/local/bin/alacritty
+
+sudo mkdir -p /usr/local/share/man/man1
+gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+gzip -c extra/alacritty-msg.man | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
+
+mkdir -p ~/.bash_completion
+cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
+echo ". ~/.bash_completion/alacritty" >> ~/.bashrc
+
+~~~ alt+F(2-7) or alt+RIGHT/LEFT to switch terminal, and login
+
+> lcms2
+> pango
+> imagemagick
+> dbus-glib
+> glew
+> glfw-x11
+> libcanberra
+> ddcutil
+
+# /etc/modules-load.d/ddcutil.conf ~(i2c-dev)
+
+## sudo ddcutil detect|(capabilities|vcpinfo | less)
+## sudo ddcutil getvcp|(setvcp) code (value) ~ can poweroff monitor from cmdline! among other things..
+### todo: add runit hook to poweroff monitor when system shuts down (unless reboot..)
+
+~~~
+
+> gtk2 
+> gtk3
+> gtk4
+
+> i3-gaps i3status
+
+> bemenu-xorg
+
+> 'rvxt-unicode' 
+# standin if you want a sturdy but unriced backup terminal
+
+#/etc/i3/config -> ~/.config/i3/config ; disable extra stuff, set terminal and bemenu-run <br>
+(note "-" and not "_" as in dmenu_run)
+
+> xorg-xinit
+
+#/etc/X11/xinit/xinitrc -> ~/.xinitrc ; at the bottom remove twm etc and put "exec i3" in their place
+
+startx
+
+~~~
+## follow the prompts; cmd+enter opens terminal; cmd+d opens menu; 
+## see [videos](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf) for intro on how to do stuff
+
+> jre-openjdk
+
+#/etc/pacman.conf
+```
+[universe]
+Server = https://universe.artixlinux.org/$arch
+```
+#### next: pipewire & audio, qt5, multi-mc
+#### ffmpeg-obs, vlc-luajit, obs-studio-tytan652
