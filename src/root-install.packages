@@ -1,0 +1,119 @@
+#partition
+#format/label
+#mount
+#dhcpcd/ping
+
+~~~ #basestrap
+
+base base-devel runit elogind-runit
+
+linux-zen linux-firmware intel-ucode
+
+~~~
+
+fstabgen -U /mnt >> /mnt/etc/fstab && artix-chroot /mnt
+
+~~~ pacman -S
+
+nano sudo
+
+grub efibootmgr
+
+dhcpcd
+
+connman-runit
+
+nftables-runit firewalld-runit
+
+alsa-utils
+
+~~~ chroot.sh:
+
+ln -sf /usr/share/zoneinfo/$Region/$City /etc/localtime
+hwclock --systohc
+# /etc/locale.gen ~ (uncomment en_US.UTF-8)
+locale-gen
+# /etc/locale.conf ~(export LANG="en_US.UTF-8" ; export LC_COLLATE="C")
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader=grub	
+grub-mkconfig -o /boot/grub/grub.cfg
+passwd
+useradd -m $user
+passwd user
+gpasswd -a $user wheel
+EDITOR="nano" visudo
+# uncomment line allowing wheel
+# /etc/hostname ~($hostname)
+# /etc/hosts ~(127.0.0.1 localhost ; ::1 localhost ; 127.0.1.1 $hostname.localdoman $hostname)
+ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
+ln -s /etc/runit/sv/nftables /etc/runit/runsvdir/default
+ln -s /etc/runit/sv/firewalld /etc/runit/runsvdir/default
+# ^patch: add ">/dev/null" before "2&>1" to remove annoying text at login.
+ln -s /etc/runit/sv/alsa /etc/runit/runsvdir/default
+
+~~~ reboot
+
+man-db man-pages
+
+pacman-contrib pkgfile
+
+libedit 
+
+llvm-libs
+
+python
+
+linux-zen-headers
+
+dkms
+
+~~~
+
+cairo
+
+mesa mesa-vdpau libva-mesa-driver
+
+wayland egl-wayland
+
+libinput libepoxy
+
+xorg-server
+
+nvidia-utils
+
+nvidia-dkms
+
+~~~ config.sh:
+
+pkgfile --update
+
+# /etc/pacman.d/hooks/nvidia.hook ~ (https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
+
+# /etc/mkinitcpio.conf ~ (MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ... )
+mkinitcpio -P
+
+# cat /sys/devices/platform/efi-framebuffer.0/depth
+# look at the monitor menu and match height and width exactly
+## alternatively use ddcutil slightly later in the process..
+### todo: add numlock support
+
+# /etc/default/grub :
+# ~ (GRUB_GFXMODE="$width"x"$height"x"$depth",auto)
+# ~ (GRUB_CMDLINE_LINUX_DEFAULT=" ... nvidia-drm.modeset=1 ..."
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# /etx/X11/xorg.conf.d/20-nvidia.conf
+```
+Section "Device"
+        Identifier "Nvidia Card"
+        Driver "nvidia"
+        VendorName "NVIDIA Corporation"
+        BoardName "GeForce GTX 1050 Ti"
+        Option "NoLogo" "1"
+        Option "ConnectedMonitor" "DFP"
+EndSection
+```
+# /usr/lib/modprobe.d/nvidia.conf
+```
+options nvidia NVreg_UsePageAttributeTable=1 NVreg_InitializeSystemMemoryAllocations=$HARDENED NVreg_EnablePCIeGen3=$PCI3
+options nvidia_drm modeset=1
+```
