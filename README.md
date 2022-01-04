@@ -4,7 +4,7 @@ psuedo-scripts to install a simple but complete (and secure) [artix](https://art
 
 note: this is a work in progress. new features are being added as time and resources allow.
 
-current iteration is a few text files which document which packages in which order and which configuration files and other relevant actions need to be taken (, in what order..). this is not _exactly_ tested in that I installed on one comuter and typed on the other. should work for nvidia gpus 10** and up.
+current iteration is a few text files which document which packages in which order and which configuration files and other relevant actions need to be taken (, in what order..). this is not _exactly_ tested in that I installed on one comuter and typed on the other. should work for nvidia gpus 10** and up. (ps. I don't recommend nvidia but yeah it's cheap and available so..)
 
 \[package managers can resolve dependencies, but they don't understand the subtleties of system design\]
 
