@@ -48,10 +48,18 @@ the default path here assumes you are using a free (== unused and prepared to be
 _information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). grub can manage most modern systems. more to come on that subject in the future..._
 
 as far as how much to allocate, that depends on what you want to do with the system. <br>
+
 using a small efi boot partition is possible as long as you store your kernels on the root partition, which is wide-default. <br>
-the root partition can be smaller than 40 if the system is light. I usually use 100 if the drive is big. <br>
-home at minimum needs to be at least enough to store configuration and working files, so not that big really <br>
-one could use a seperate partition/drive for audio and yet another larger one for video.. for example. <br>
+
+swap partition is not mandatory but a backup for RAM - can can use a swap file instead (or none if you like)<br>
+if you overflow RAM without swap in place, your system will either slow to a crawl or hang.
+swap can also be used for hibernation, in which case you need a bit more than used RAM to snooze. <br>
+
+the root partition can be (significantly) smaller than 40 if the system is light. <br>
+I usually use 100 if the drive is big because why not. <br>
+
+home at minimum needs to be at least enough to store user configuration and working files, so not that big really <br>
+one could use a seperate partition or drive for audio and yet another larger one for video.. for example. <br>
 however you want to set it up, once you get it there, you can lock it in to the [FSTAB](https://wiki.archlinux.org/title/Fstab) for automount. <br>
 (assuming the initramfs and/or udev are configured to load all the modules required to access them ~ such as for encryption)
 
