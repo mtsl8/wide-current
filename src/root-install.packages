@@ -112,6 +112,11 @@ Section "Device"
         Option "ConnectedMonitor" "DFP"
 EndSection
 ```
+
+## (taken from [nvidia-tweaks](https://aur.archlinux.org/cgit/aur.git/tree/nvidia.conf?h=nvidia-tweaks) AUR package)
+## if the security risk of not zeroing ex-kernel ram is less bad than waiting for it to happen, HARDENED=0
+## if your motherboard and GPU support PCI v3, PCI3=1
+
 # /usr/lib/modprobe.d/nvidia.conf
 ```
 options nvidia NVreg_UsePageAttributeTable=1 NVreg_InitializeSystemMemoryAllocations=$HARDENED NVreg_EnablePCIeGen3=$PCI3
