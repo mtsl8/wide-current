@@ -79,7 +79,7 @@ fdisk $HD
 ```
 ### erase, encrypt ~ incomplete, optional
 
-Encryption on all ones zeroes is not very strong. encryption on random is.<br>
+Encryption ontop of all 1's or straight 0's is not very strong. encryption on random is.<br>
 one can use /dev/urandom alone but it's a lot faster to use openssl
 
 NAND memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces their lifespan <br>
