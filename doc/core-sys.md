@@ -118,7 +118,7 @@ mount "$HD"4 /mnt/home
 ```
 ### connect
 ```
-dhcpcd && ping widemage.net
+dhcpcd && ping -w 5 -c 10 widemage.net
 ```
 ### install
 ```
