@@ -18,7 +18,7 @@ additionally, there will soon be docs to assist in with office and utility softw
 
 ___
 
-see the [docs](/doc/index.md) for more info.
+see the [docs](/doc/core-sys.md) for more info.
 
 see the [/dev](https://github.com/mtsl8/wide-current/tree/dev) branch for next iteration (WIP).
 
