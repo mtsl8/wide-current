@@ -36,16 +36,18 @@ grub-install --target=x86_64-efi --efi-directory=/efi --bootloader=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 passwd
 useradd -m $user
-passwd user
+passwd $user
 gpasswd -a $user wheel
 EDITOR="nano" visudo
 # uncomment line allowing wheel
+## note: the finer grain of control used in the sudo file the better for security
+## in some cases creating a utility user limited to specific tasks is a useful strategy
 # /etc/hostname ~($hostname)
 # /etc/hosts ~(127.0.0.1 localhost ; ::1 localhost ; 127.0.1.1 $hostname.localdoman $hostname)
 ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/nftables /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/firewalld /etc/runit/runsvdir/default
-# ^patch: add ">/dev/null" before "2&>1" to remove annoying text at login.
+# ^patch: add ">/dev/null" before "2&>1" in start file to remove annoying text at login.
 ln -s /etc/runit/sv/alsa /etc/runit/runsvdir/default
 
 ~~~ reboot
