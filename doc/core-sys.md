@@ -13,7 +13,7 @@ do not just blindly copy and paste.. it is not quite that refined yet.
 * host = [artix](https://artixlinux.org/)
 * package manager = [pacman](https://wiki.archlinux.org/title/Pacman) + [artools](https://gitea.artixlinux.org/artix/artools)
 * mirror = artix [(gitea)](https://gitea.artixlinux.org/artixlinux)
-  * todo: [local cache server](https://xyne.dev/projects/pacserve/)
+  * todo: [local cache server](https://xyne.dev/projects/pacserve/) (reduce load on artix mirror)
 * kernel = [linux-zen](https://github.com/zen-kernel/zen-kernel)
   * scheduler: bfq, high resolution, highly responsive, congestion control
   * more details at https://liquorix.net/ (binary distribution)
