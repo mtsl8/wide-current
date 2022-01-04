@@ -52,7 +52,7 @@ as far as how much to allocate, that depends on what you want to do with the sys
 using a small efi boot partition is possible as long as you store your kernels on the root partition, which is wide-default. <br>
 
 swap partition is not mandatory but a backup for RAM - can can use a swap file instead (or none if you like)<br>
-if you overflow RAM without swap in place, your system will either slow to a crawl or hang.
+if you overflow RAM without swap in place, your system will either slow to a crawl or hang / kernel panic <br>
 swap can also be used for hibernation, in which case you need a bit more than used RAM to snooze. <br>
 
 the root partition can be (significantly) smaller than 40 if the system is light. <br>
