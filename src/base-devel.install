@@ -60,6 +60,7 @@ alias pkg-clone='git clone "https://aur.archlinux.org/$PKG.git" && cd $PKG'
 
 #execute in source/$PKG/ directory to a) build and install b) pull updates, build and install
 # ? does buildpkg really handle checking all the dependencies via pacman? i think so; will see..
+# alias pkg-core-install="buildpkg-system && pkg-add && pagman $PKG"
 alias pkg-install="buildpkg-world && pkg-add && pagman $PKG"
 alias pkg-update='git pull "https://aur.archlinux.org/$PKG.git" && pkg-install'
 ' >> ~/.bashrc
