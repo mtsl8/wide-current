@@ -51,7 +51,7 @@ export REPODIR="$HOME/devel/repo/"
 export REPO="$REPODIR/local.db.tar.gz"
 
 ## to use these aliases, first set PKG="name-of-package"
-## caveats: package must exist in aur; (dependencies must be installed)?
+## caveats: package must exist in aur; must dependencies already or does it request.. i think the latter, shall see
 
 #execute anywhere to add a completed package to local db and sync pacman:
 alias pkg-add="repo-add $REPO $REPODIR/$PKG.pkg.tar.xz && sudo pacman -Sy"
@@ -67,7 +67,6 @@ alias pkg-update="git pull "https://aur.archlinux.org/$PKG.git" && pkg-install"
 . ~/.bashrc
 
 ~~~ use
-
 cd ~/devel/source/
 
 PKG="name-of-package"
