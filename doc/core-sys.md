@@ -83,7 +83,7 @@ fdisk $HD
 # ...
 # BOOT: 100M +efi/esp/boot flag
 # SWAP: 4G linux swap
-# ROOT: 40G linux filesystem
+# ROOT: 40G linux root
 # HOME: 100G linux filesystem
 ```
 ### erase, encrypt ~ incomplete, optional
