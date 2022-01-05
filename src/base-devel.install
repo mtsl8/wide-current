@@ -13,7 +13,7 @@ mkdir -p $HOME/devel/{source,repo,artools}
 Server = file:///home/$user/devel/repo/local.db.tar.gz
 ```
 
-sudo pacman -S artools
+pagman artools
 mkdir -p $HOME/.config/artools/
 cp /etc/artools/artools-base.conf $HOME/.config/artools/
 
