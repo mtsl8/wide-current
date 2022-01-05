@@ -43,8 +43,8 @@ GPGKEY="$keyfile"
 ~~~ setup
 
 echo '
-#these two belong in an earlier script
-alias grubpdate="grub mkconfig -o /boot/grub/grub.cfg"
+##these two belong in an earlier script:
+alias grubpdate="sudo grub mkconfig -o /boot/grub/grub.cfg"
 alias pagman="sudo pacman -S"
 
 export REPODIR="$HOME/devel/repo/"
