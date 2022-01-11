@@ -1,10 +1,14 @@
-### [partitioning the drive(s)
+### important context
 
-the default path here assumes you are using a free (== unused and prepared to be ERASED) HD; </br>
+information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). grub can manage most modern systems. rEFInd I believe is used with Mac OS for dual booting. more to come on those subjects in the future...
 
-_information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). grub can manage most modern systems. more to come on that subject in the future..._
+the default path here assumes you are using a single free (== unused and prepared to be ERASED) HD; however you could fairly easily split things up between multiple drives. concepts such as encryption, LVM, and RAID are more complex, and will require a firm grasp of the basics.
 
-as far as how much to allocate, that depends on what you want to do with the system. <br>
+there will be different approaches depending on the type of drive you are using, and the type of firmware your computer has available.
+
+### deciding how to allocate space
+
+deciding how much to allocate for what depends on what you want to do with the system.
 
 using a small efi boot partition is possible as long as you store your kernels on the root partition, which is wide-default. <br>
 
@@ -21,13 +25,12 @@ one could use a seperate partition or drive for audio and yet another larger one
 however you want to set it up, once you get it there, you can lock it in to the [FSTAB](https://wiki.archlinux.org/title/Fstab) for automount. <br>
 (assuming the initramfs and/or udev are configured to load all the modules required to access them ~ such as for encryption)
 
+### partitioning the drive(s)
+
+
 example partitions:
 _(replace "X" with the letter of the drive you are installing to:)_
 ```
-artix
-artix
-
-su
 
 lsblk -f
 
