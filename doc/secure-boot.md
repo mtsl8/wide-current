@@ -10,4 +10,4 @@ see: [here](https://en.wikipedia.org/wiki/Linux_malware), and search for anythin
 encryption and proper system management are in general more useful for security than secure boot.
 
 \[note: unless you are using something like Bitlocker and storing the key in the TPM, 
-disabling secure boot should not interfere with booting another OS, and re-enabling will restore TPM functionality\]
+disabling secure boot should not interfere with booting another OS, and re-enabling should restore TPM functionality\]
