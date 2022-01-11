@@ -25,7 +25,18 @@ ___
 
 ### [iso > media](install-media.md)
 
-### [secure boot](secure-boot.md)
+### [re: secure boot](secure-boot.md)
+
+### boot host system
+
+* disable secure boot and legacy/CSM (if on modern EFI)
+* either:
+  * set the boot order in the boot setup/menu, so that your media is read before the hard drive;
+  * or use the boot options key at startup to select it from a list of available devices
+* in the host boot menu, select the type of media you are booting from (optical vs. flash/HD)
+* there may be some gpg stuff, then press a key to activate the getty
+* you will arrive at a login shell; user:artix pass:artix
+* type "su" to become root and begin.
 
 ___
 
