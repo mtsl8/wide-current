@@ -4,7 +4,42 @@ information about dual booting with another os depends on how they boot. dual bo
 
 the default path here assumes you are using a single free (== unused and prepared to be ERASED) HD; however you could fairly easily split things up between multiple drives. concepts such as encryption, LVM, and RAID are more complex, and will require a firm grasp of the basics.
 
-there will be different approaches depending on the type of drive you are using, and the type of firmware your computer has available.
+there will be different approaches depending on:
+
+a) the type of drive you are using:
+
+* hard disk drives (HDD) are magnetic platter devices 
+  * with virtually damageless writes to disk 
+  * with limited physical durability
+  * with limited data I/O speed
+* solid state drives (SSD) are NAND flash memory
+  * with a limited number of writes to each memory cell
+  * with impressive physical durability
+  * with high data I/O speed
+  * with varying levels of built in drive management tools
+* non-volatile memory express (NVMe) are NAND flash memory
+  * packaged for PCIe slots
+  * with maximum I/O speed
+  * with varying levels of built in hardware encryption
+
+and<br>
+b) the type of firmware your computer has available:
+
+* basic input output system (BIOS)
+  * is the old standard firmware
+  * prefers MBR partition tables, or slightly modified GPT
+  * expects boot information in a specific place at the beginning of the drive
+  * is not configurable via runtime software interface
+  * does not provide many security features
+* unified extensible firmware interface (UEFI)
+  * is the new standard firmware
+  * prefers GPT partition tables
+  * is fairly flexible and aware of bootable devices without extra help
+  * can be modified and adjusted using EFI variables (efivars) at runtime
+  * has varying levels of support for hardware based security, including 
+    * secure boot
+    * machine owner keys
+    * trusted platform module (TPM) managment
 
 ### deciding how to allocate space
 
