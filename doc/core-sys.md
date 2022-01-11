@@ -29,6 +29,6 @@ ___
 
 ___
 
-### [preparing the drive(s) for installation](drives.md)
+### [preparing hard drive(s) for installation](drives.md)
 
-### [mounting the drives and installing the core system](install.md)
+### [mounting hard drive(s) and installing the core system](install.md)
