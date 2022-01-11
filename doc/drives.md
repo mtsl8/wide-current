@@ -81,29 +81,6 @@ fdisk $HD
 # ROOT: 40G linux root
 # HOME: 100G linux filesystem
 ```
-### erase, encrypt ~ incomplete, optional
-
-Encryption ontop of all 1's or straight 0's is not very strong. encryption on random is.<br>
-one can use /dev/urandom alone but it's a lot faster to use openssl
-
-NAND memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces their lifespan <br>
-more sophisticated devices have built in harware encryption made for the drive. <br>
-buy those / use that !! not actually too pricey for primo NVMe
-
-HDD's do not mind at all, but it will take a while.
-
-these block settings were the fastest I found on my 7200rpm seagate HDD
-```
-OBLK=1024K
-IBLK=64K
-
-PASS=$(tr -cd '[:alnum:]' < /dev/urandom 2>/dev/null | head -c128)
-openssl enc -aes-256-ctr -pass pass:"$PASS" -nosalt </dev/zero \
-| dd obs=$OBLK ibs=$IBLK of=$PARTITION \
-oflag=direct status=progress
-```
-see [here](https://wiki.archlinux.org/title/Dm-crypt) for some light reading on the actual encryption part heh
-
 ### format
 ```
 mkfs.fat -F 32 "$HD"1
@@ -112,3 +89,32 @@ mkswap -L SWAP "$HD"2
 mkfs.ext4 -L ROOT "$HD"3
 mkfs.ext4 -L HOME "$HD"4
 ```
+### erase, encrypt ~ incomplete, optional
+
+Encryption ontop of all 1's or straight 0's is not very strong. encryption on random is.<br>
+one can use /dev/urandom alone but it's a lot faster to use openssl
+
+NAND memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces their lifespan <br>
+more sophisticated devices have built in harware encryption made for the drive. <br>
+buy those / use that !! not actually too pricey for primo NVMe <br>
+in order to factory reset SSD, see [here](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing) (check nearby if that doesn't cover your drive)
+
+HDD's do not mind at all, but it will take a while.
+
+replace "X" with the drive, and include a number "n" if you want to target a partition<br>
+if the "n" is omitted the entire drive will be erased.<br>
+
+many will use _dd_, but _cat_ or _pv_ are naturally faster.<br>
+_pv_ will display progress, _cat_ will not.<br>
+
+```
+DEVICE="/dev/sdXn"
+
+PASS=$(tr -cd '[:alnum:]' < /dev/urandom 2>/dev/null | head -c128)
+openssl enc -aes-256-ctr -pass pass:"$PASS" -nosalt </dev/zero \
+| pv > $DEVICE
+
+```
+see [here](https://wiki.archlinux.org/title/Dm-crypt) and [here](https://wiki.artixlinux.org/Main/InstallationWithFullDiskEncryption) for some light reading on the actual encryption part heh
+
+the short version is, you can encrypt the entire drive as one device, or choose specific partitions to encrypt. the way you choose to encrypt has many potential consequences on how you boot, and extra steps to be taken by the bootloader and kernel to do so. LUKS2 is the standard encryption header system. there are ways to backup the header and also to add multiple password keys or keyfiles, which can be stored mentally, locally, or on a detachable drive.
