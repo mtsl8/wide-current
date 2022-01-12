@@ -1,6 +1,8 @@
-### choosing a host
+### choosing a host & downloading iso & sig
 
-### downloading and verifying an iso
+## verifying an iso with sig file
+
+install "gnupg" using pacman, in order to use "gpg" to verify iso
 
 ### writing an iso to installation media
 
