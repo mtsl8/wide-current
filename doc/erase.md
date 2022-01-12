@@ -8,6 +8,8 @@ ___
 
 HDD's do not mind bit blasting at all, but it will take a while. /dev/urandom can be used directly to provide a unseeded random sequence, but it's a lot faster to use _openssl_ with a urandom generated password. 
 
+\[note: if you are using an older kernel (<5.6) you may benefit from using _rng-tools_ (hardware-based) or _haveged_ (software-based) to increase entropy\]
+
 replace "X" with the drive letter, and include a number "N" to target a specific partition. if the partition number is omitted the entire drive will be erased.
 
 many will use _dd_, but _cat_ or _pv_ are naturally faster in most cases. _pv_ will display progress, _cat_ will not.
