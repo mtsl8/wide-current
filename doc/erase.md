@@ -7,6 +7,7 @@ NAND memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces thei
 HDD's do not mind bit blasting at all, but it will take a while. /dev/urandom can be used directly to provide a unseeded random sequence, but it's a lot faster to use _openssl_ with a urandom generated password. 
 
 Alternatively, if for some reason you want to use urandom directly but the system is low on entropy, generation speed can be improved using _rng-tools_ (hardware based) or _haveged_ (software based) \[search archwiki.org for more info\].
+___
 
 replace "X" with the drive letter, and include a number "N" to target a specific partition. if the partition number is omitted the entire drive will be erased.
 
