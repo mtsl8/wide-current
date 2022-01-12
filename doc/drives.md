@@ -43,6 +43,14 @@ b) the type of firmware your computer has available:
 
 ### determining boot mode
 
+Usually if the computer is booting in UEFI mode, the boot options listed will be labeled as such.
+
+If you are still unsure, boot into the host, login, and run:
+```
+ls /sys/firmware/
+```
+if you do not see an "efi" folder, you are in Legacy/BIOS mode
+
 ### learning about connected block storage devices
 
 the command _lsblk_ will return a device tree of all available block devices.
