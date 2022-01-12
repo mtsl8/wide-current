@@ -88,7 +88,7 @@ one could use a seperate partition or drive for audio and yet another larger one
 
 ### partition
 
-NVMe devices will show up under /dev/nvme* instead of /dev/sd*, and use namespaces instead of partitions. The tool nvme-cli can be used to manage namespaces (more info [here](https://wiki.archlinux.org/title/Solid_state_drive/NVMe).)
+NVMe devices will show up under /dev/nvme* instead of /dev/sd*, and use namespaces instead of partitions. The tool _nvme-cli_ can be used to manage namespaces (more info [here](https://wiki.archlinux.org/title/Solid_state_drive/NVMe).)
 
 _parted_ is a more scriptable and modern tool wich will be used in the future. 
 
