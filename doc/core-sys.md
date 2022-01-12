@@ -24,6 +24,7 @@ ___
 ### [acquire hardware](hardware.md)
 
 ### [iso > media](install-media.md)
+\[note: gpg is provided by the package "gnupg"\]
 
 ### [re: secure boot](secure-boot.md)
 
