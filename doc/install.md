@@ -1,4 +1,7 @@
 ### mount
+
+(if you have restarted since formatting the partitions, make sure to reset the HD variable or this won't work)
+
 ```
 swapon "$HD"2
 mount "$HD"3 /mnt
