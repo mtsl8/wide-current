@@ -5,11 +5,11 @@
 * [boot mode](#determining-boot-mode)
 * [connected devices](#learning-about-connected-block-storage-devices)
 * [allocating space](#deciding-how-to-allocate-space)
+<br>__________<br>
 * [erase](#erase)
 * [encrypt](#encrypt)
 * [partition](#partition)
 * [format](#format)
-* [outro](#outro)
 
 ### <a id=one> important context </a>
 
