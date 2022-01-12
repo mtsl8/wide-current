@@ -65,7 +65,7 @@ The command _lsblk_ will return a device tree of all available block devices.
 
 Deciding how much to allocate for what depends on what you want to do with the system.
 
-Using a small EFI __boot__ partition is possible as long as you store your kernels on the root partition, which is wide-default. Some older UEFI implementations have issues if you make it too small - see [here](https://www.rodsbooks.com/efi-bootloaders/principles.html) - so 550M is a good safe number. If you are using BIOS/MBR you don't need a seperate boot partition, but it can make things easier for encryption or for multi-booting different operating systems<br>
+Using a small EFI __boot__ partition is possible as long as you store your kernels on the root partition, which is wide-default. Some older UEFI implementations have issues if you make it too small - see [here](https://www.rodsbooks.com/efi-bootloaders/principles.html) - so 550M is a good safe number. If you are using BIOS/MBR you don't need a seperate __boot__ partition, but it can make things easier for encryption or for multi-booting different operating systems<br>
 
 __swap__ partition is not mandatory but a backup for RAM and recommended on HDD's - a swap file can be used instead on SSD's (or just run swapless if you like living on the edge...) 
 
