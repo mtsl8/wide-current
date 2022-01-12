@@ -72,7 +72,7 @@ one could use a seperate partition or drive for audio and yet another larger one
 
 ### [erase](erase.md) ~ optional
 
-### encrypt ~ optional
+### [encrypt](encrypt.md) ~ optional
 
 ### partitioning a drive
 
