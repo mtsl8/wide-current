@@ -34,12 +34,12 @@ b) the type of firmware your computer has available:
   * prefers MBR partition tables, or slightly modified GPT
   * expects boot information in a specific place at the beginning of the drive
   * is not configurable via runtime software interface
-  * does not provide additional security "features"
+  * does not provide advanced security features (just password on boot menu)
 * unified extensible firmware interface (UEFI)
   * is the new standard firmware
   * prefers GPT partition tables
   * is fairly flexible and aware of bootable devices without extra help
-  * can be modified and adjusted using EFI variables (efivars) at runtime
+  * can be modified and adjusted using EFI variables (efivars) at OS runtime
   * has varying levels of support for hardware based security, including 
     * secure boot
     * machine owner keys
@@ -47,7 +47,7 @@ b) the type of firmware your computer has available:
 
 ### determining boot mode
 
-Usually if the computer is booting in UEFI mode, the boot options listed will be labeled as such.
+Usually if the computer is booting in UEFI mode, the boot options listed should be labeled as such.
 
 If you are still unsure, boot into the host, login, and run:
 ```
