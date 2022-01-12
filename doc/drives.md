@@ -1,3 +1,5 @@
+## configuring hard drives
+
 ### important context
 
 information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). grub can manage most modern systems. rEFInd I believe is used with Mac OS for dual booting. more to come on those subjects in the future...
