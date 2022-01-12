@@ -5,8 +5,14 @@
 ```
 swapon "$HD"2
 mount "$HD"3 /mnt
-mkdir -p /mnt/{efi,home}
+
+# for efi:
+mkdir /mnt/efi
 mount "$HD"1 /mnt/efi
+# for bios:
+mount "$HD"1 /mnt/boot
+
+mkdir /mnt/home
 mount "$HD"4 /mnt/home
 ```
 
