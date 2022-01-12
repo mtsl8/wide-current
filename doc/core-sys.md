@@ -29,12 +29,15 @@ ___
 
 ### boot host system
 
-* disable secure boot and legacy/CSM (if on modern EFI)
-* either:
+* if on modern EFI (current standard), in the boot setup menu:
+  * disable secure boot
+  * disable legacy/CSM emulation mode (adds boot time and potential confusion, if BIOS booting is not desired/required)
+* to choose the installation media as a boot source:
   * set the boot order in the boot setup/menu, so that your media is read before the hard drive;
   * or use the boot options key at startup to select it from a list of available devices
 * in the host boot menu, select the type of media you are booting from (optical vs. flash/HD)
-* there may be some gpg stuff, then press a key to activate the getty
+* there may be some keyring stuff whizzing by; 
+* when it's finished, press a key on the keyboard to activate the getty
 * you will arrive at a login shell; user:artix pass:artix
 * type "su" to become root and begin.
 
