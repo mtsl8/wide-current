@@ -70,7 +70,7 @@ __swap__ partition is not mandatory but a backup for RAM and recommended on HDD'
 * if you overflow RAM without swap in place, your system will crawl / hang / kernel panic.
 * swap can also be used for hibernation, in which case you need to allocate a bit more than the amount of used RAM in order to hibernate the RAM to the hard drive.
 * if you use encryption, consider the security implications of using unencrypted swap. (more info below)
-* keeping in mind SSD's limited write cycles, in those cases it is preferable to use a swapfile and the hard drive's built in TRIM to rotate the drive, rather than burn out a fixed partition<br>
+* keeping in mind SSD's limited write cycles, in those cases it is preferable to use a swapfile and the hard drive's built in [TRIM](https://wiki.archlinux.org/title/Solid_state_drive#TRIM) to rotate the drive, rather than burn out a fixed partition<br>
 
 the __root__ partition can be (significantly) smaller than 40 if the system is light/minimal. I usually use 100 if the drive is big because .. why not?
 
@@ -121,3 +121,6 @@ mkswap -L SWAP "$HD"2
 mkfs.ext4 -L ROOT "$HD"3
 mkfs.ext4 -L HOME "$HD"4
 ```
+### outro
+
+the next step would be to mount the new partitions, but that is saved for the next [doc](install.md). one can stop here with out losing any progress, while partitions must be manually remounted each time until the FSTAB is created and the bootloader is properly set up.
