@@ -14,9 +14,8 @@ many will use _dd_, but _cat_ or _pv_ are naturally faster in most cases. _pv_ w
 
 ```
 DEVICE="/dev/sdXN"
-
 PASS=$(tr -cd '[:alnum:]' < /dev/urandom 2>/dev/null | head -c128)
+
 openssl enc -aes-256-ctr -pass pass:"$PASS" -nosalt </dev/zero \
 | pv > $DEVICE
-
 ```
