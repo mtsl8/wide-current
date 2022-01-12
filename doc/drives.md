@@ -1,6 +1,7 @@
+< [core system](core-sys.md)
+
 ## configuring hard drives
 
-* [context](#important-context)
 * [boot mode](#determining-boot-mode)
 * [connected devices](#learning-about-connected-block-storage-devices)
 * [allocating space](#deciding-how-to-allocate-space)
