@@ -34,7 +34,7 @@ b) the type of firmware your computer has available:
   * prefers MBR partition tables, or slightly modified GPT
   * expects boot information in a specific place at the beginning of the drive
   * is not configurable via runtime software interface
-  * does not provide many security features
+  * does not provide additional security "features"
 * unified extensible firmware interface (UEFI)
   * is the new standard firmware
   * prefers GPT partition tables
