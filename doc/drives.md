@@ -2,7 +2,7 @@
 
 information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). grub can manage most modern systems. rEFInd I believe is used with Mac OS for dual booting. more to come on those subjects in the future...
 
-the default path here assumes you are using a single free (== unused and prepared to be ERASED) HD; however you could fairly easily split things up between multiple drives. concepts such as encryption, LVM, and RAID are more complex, and will require a firm grasp of the basics.
+the default path here assumes you are using a single free (== unused and prepared to be ERASED) HD with an EFI system. one could fairly easily split things up between multiple drives; concepts such as encryption, LVM, and RAID however are more complex, and will require a firm grasp of the basics.
 
 there will be different approaches depending on:
 
@@ -41,6 +41,14 @@ b) the type of firmware your computer has available:
     * machine owner keys
     * trusted platform module (TPM) managment
 
+### determining boot mode
+
+### learning about connected block storage devices
+
+the command _lsblk_ will return a device tree of all available block devices.
+
+"lsblk -f" will include information about specific partitions, including filesystems, usage, UUID, Label.
+
 ### deciding how to allocate space
 
 deciding how much to allocate for what depends on what you want to do with the system.
@@ -51,7 +59,7 @@ swap partition is not mandatory but a backup for RAM and recommended on HDD's - 
 
 * if you overflow RAM without swap in place, your system will crawl / hang / kernel panic.
 * swap can also be used for hibernation, in which case you need to allocate a bit more than the amount of used RAM in order to hibernate the RAM to the hard drive.
-* if you use encryption, consider the security implications of using unencrypted swap.. [solutions]()
+* if you use encryption, consider the security implications of using unencrypted swap. (more info below)
 * keeping in mind SSD's limited write cycles, in those cases it is preferable to use a swapfile and the hard drive's built in TRIM to rotate the drive, rather than burn out a fixed partition<br>
 
 the root partition can be (significantly) smaller than 40 if the system is light/minimal. I usually use 100 if the drive is big because .. why not?
@@ -62,45 +70,20 @@ home at minimum needs to be at least enough to store user configuration and work
 
 one could use a seperate partition or drive for audio and yet another larger one for video. another possible use of a seperate partition would be a "vault" for example, to keep encrypted data seperately secure without complicating the rest of the system. perhaps you have an external drive with your music library, which you leave plugged in and want to be automounted on boot.. _\[any extra partitions can be mounted based on the type of user permissions you want them to have: the root user owns "/\*" including "/home/" ; each user owns their "/home/$user/" directory and everything it contains by default.\]_
 
-### erase ~ optional
-
-The two main reasons one would want to erase the drive are to delete the old data or to prepare for encryption. One could just write all 0's or 1's to the drive, but that will not bury the data well, nor is a quality foundation for strong encryption. randomness is preferred. to deeply erase, multiple passes may be required; however, simply deleting the partition table will render most data useless to the casual user.
-
-NAND memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces their lifespan <br>
-more sophisticated devices have built in harware encryption made for the drive. <br>
-buy those / use that !! not actually too pricey for primo NVMe <br>
-in order to factory reset SSD which doesn't have these capabilities, see [here](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing) (check nearby if that doesn't cover your drive)
-
-HDD's do not mind at all, but it will take a while. one can use /dev/urandom directly to provide a random sequence, but it's a lot faster to use openssl:
-
-replace "X" with the drive letter, and include a number "N" if you want to target a partition<br>
-if the "N" is omitted the entire drive will be erased.<br>
-
-many will use _dd_, but _cat_ or _pv_ are naturally faster in most cases.<br>
-_pv_ will display progress, _cat_ will not.<br>
-
-```
-DEVICE="/dev/sdXN"
-
-PASS=$(tr -cd '[:alnum:]' < /dev/urandom 2>/dev/null | head -c128)
-openssl enc -aes-256-ctr -pass pass:"$PASS" -nosalt </dev/zero \
-| pv > $DEVICE
-
-```
+### [erase](erase.md) ~ optional
 
 ### encrypt ~ optional
 
-see [here](https://wiki.archlinux.org/title/Dm-crypt) and [here](https://wiki.artixlinux.org/Main/InstallationWithFullDiskEncryption) for some light reading on the actual encryption part heh
-
-the short version is, you can encrypt the entire drive as one device, or choose specific partitions to encrypt. the way you choose to encrypt has many potential consequences on how you boot, and extra steps to be taken by the bootloader and kernel to do so. LUKS2 is the standard encryption header system. there are ways to backup the header and also to add multiple password keys or keyfiles, which can be stored mentally, locally, or on a detachable drive.
-
 ### partitioning a drive
+
+parted is a more scriptable and modern tool wich will be used in the future. 
+
+cfdisk I have tried and had issues with, perhaps others like it.
+
+fdisk is the old standard. it is interactive and provides a help menu to explain the commands available. basically, you choose a table type (MBR/GPT), create the partitions, change their type if needed, then finally write the table to the disk. for partition number and start point, usually accepting the default by pressing enter is recommended. to denote endpoint(=size), the syntax +500M or +100G (for example) is used.
 
 replace "X" in "sdX" with the letter of the drive you are working on:
 ```
-
-lsblk -f
-
 HD="/dev/sdX"
 
 fdisk $HD
@@ -108,12 +91,19 @@ fdisk $HD
 # or whichever partition tool you want to use..
 # (new GPT table)
 # ...
-# BOOT: 100M +efi/esp/boot flag
+# BOOT: 100M efi/esp/boot (linux filesystem for MBR)
 # SWAP: 4G linux swap
 # ROOT: 40G linux root
 # HOME: 100G linux filesystem
 ```
 ### format
+
+EFI system partition must be FAT; FAT 16 has a limited max size so FAT 32 is usually used.
+
+ext4 is used as a general filesystem; it is the modern linux default.
+
+"e2label $PARTITION $LABEL" can be used to re-label ext filesystems after the fact.
+
 ```
 mkfs.fat -F 32 "$HD"1
 fatlabel "$HD"1 BOOT
