@@ -86,7 +86,7 @@ one could use a seperate partition or drive for audio and yet another larger one
 
 ### [encrypt](encrypt.md) ~ optional
 
-### partitioning a drive
+### partition
 
 _parted_ is a more scriptable and modern tool wich will be used in the future. 
 
