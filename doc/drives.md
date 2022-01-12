@@ -59,7 +59,7 @@ If you do not see an "efi" folder, you are in Legacy/BIOS mode.
 
 The command _lsblk_ will return a device tree of all available block devices.
 
-"lsblk -f" will include information about specific partitions, including filesystems, usage, UUID, Label.
+```lsblk -f``` will include information about specific partitions, including filesystems, usage, UUID, Label.
 
 ### deciding how to allocate space
 
