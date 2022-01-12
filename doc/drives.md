@@ -1,6 +1,9 @@
 ## configuring hard drives
 
-### important context
+* [important context](#important-context)
+* 
+
+### <a id=one> important context </a>
 
 Information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). _grub_ can manage most modern systems. _rEFInd_ I believe is used with Mac OS for dual booting (more to come on those subjects in the future...).
 
