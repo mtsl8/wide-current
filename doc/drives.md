@@ -1,7 +1,14 @@
 ## configuring hard drives
 
-* [important context](#important-context)
-* 
+* [context](#important-context)
+* [boot mode](#determining-boot-mode)
+* [connected devices](#learning-about-connected-block-storage-devices)
+* [allocating space](#deciding-how-to-allocate-space)
+* [erase](#erase)
+* [encrypt](#encrypt)
+* [partition](#partition)
+* [format](#format)
+* [outro](#outro)
 
 ### <a id=one> important context </a>
 
@@ -85,9 +92,11 @@ __home__ at minimum needs to be at least enough to store user configuration and 
 
 one could use a seperate partition or drive for audio and yet another larger one for video. another possible use of a seperate partition would be a "vault" for example, to keep encrypted data seperately secure without complicating the rest of the system. perhaps you want to have an external drive with your music library, which you usually leave plugged in and want to be automounted on boot.. (more on mount options in the next [doc](install.md))
 
-### [erase](erase.md) ~ optional
+### [erase](erase.md) 
+(optional)
 
-### [encrypt](encrypt.md) ~ optional
+### [encrypt](encrypt.md)
+(optional)
 
 ### partition
 
