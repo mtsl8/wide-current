@@ -1,4 +1,4 @@
- - - - this is written for using modern nvidia drivers - - -
+ - - - the latter part of this is written for using modern nvidia drivers, but the first part is the same for all - - -
 
 #partition
 #format/label
@@ -75,9 +75,12 @@ wayland egl-wayland
 
 libinput libepoxy
 
-xorg-server
+- - - if you are using a different graphics card, this it where it starts to be different; - - -
+# xorg-server may not be needed depending on what environment and applications are desired
+# wayland is a more modern protocol, and xwayland can supplement; 
+# it depends on xorg-server-common instead, a small library.
 
-- - - if you are using a different graphics card, this it where it changes - - -
+xorg-server
 
 nvidia-utils
 
