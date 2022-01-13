@@ -34,9 +34,11 @@ If you want to take extra measures to isolate the contents of the drive you are 
 
 #### chroot jail:
 
-first, think about what is active and running on your system. if you login directly to a tty and then su, then chroot, then you are the only user logged in; the only interactive shell running while you access the device, and there is no way to pass commands out of the chroot to the root user. at this point any malicious code would only have access to whatever tools you have placed there, and in the worst case you could power down your computer if you somehow lost the ability to exit the chroot - without any risk of privelage escalation.
+first, think about what is active and running on your system. if you login directly to a tty and then su, then chroot, then you are in the only interactive shell running while you access the device, and there is no way to pass commands out of the chroot to the root user. at this point any malicious code would only have access to whatever tools you have placed there, and in the worst case you could power down your computer if you somehow lost the ability to exit the chroot - without any risk of privelage escalation.
 
-however, it would have to be a very sophisticated firmware-based virus embedded in the hard drive's BIOS to make any headway at all, especially assuming the only commands to be run which interact with the drive are to query the bus (lsblk) and to write random meaningless data (openssl|pv). if the drive is not mounted, the filesystems are not connected or activated, and have no means by which to execute code or effect anything important. if you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more risks.
+however, it would have to be a very sophisticated firmware-based virus embedded in the hard drive's BIOS to make any headway at all, assuming the only commands to be run which interact with the drive are to query the bus (lsblk) and to write random meaningless data (openssl|pv), neither of which request to read or execute data from the filesystems on the drive.
+
+If the drive is not mounted, the filesystems are not connected or activated, and have no means by which to execute code or effect anything important. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks.
 
 from the initial login shell:
 ```
