@@ -105,7 +105,7 @@ NVMe devices will show up under /dev/nvme* instead of /dev/sd*, and use namespac
 
 _gparted_ is a GTK front-end (GUI) for _parted_
 
-_parted_ is a more scriptable and modern tool wich will be used in the future. 
+_parted_ is a more scriptable and modern tool (which will be used in future iterations). 
 
 _cfdisk_ I have tried and had issues with, perhaps others like it.
 
