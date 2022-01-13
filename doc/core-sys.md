@@ -31,6 +31,7 @@ ___
 ### boot host system
 
 * if on modern EFI (current standard), in the boot setup menu:
+<br>__ to check boot mode see [here](https://github.com/mtsl8/wide-current/blob/main/doc/drives.md#determining-boot-mode) __<br>
   * disable secure boot
   * disable legacy/CSM emulation mode (adds boot time and potential confusion, if BIOS booting is not desired/required)
 * to choose the installation media as a boot source:
