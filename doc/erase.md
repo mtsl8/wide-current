@@ -44,7 +44,7 @@ from the initial login shell:
 ```
 sudo su
 JAIL="/mnt/chroot"
-mkdir $JAIL
+mkdir -p $JAIL
 basestrap $JAIL util-linux pv
 mount --bind $JAIL $JAIL
 artix-chroot $JAIL
