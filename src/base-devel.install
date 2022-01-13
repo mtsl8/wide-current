@@ -1,4 +1,7 @@
-~~~ this has not been run in a terminal yet, might/probably work ~~~
+~~~ some kind of conflict, either with repo name or buildpkg-world script 
+~~~ need new group I think, which means locating, understanding, then editing config files..
+~~~ in the mean time, simply install artools, clone the pkgbuild, then use buildpkg-world in the source dir.
+~~~ to install, use pacman -U. not as "elegant" but less steps and does work.
 
 # todo: pgp key setup
 
