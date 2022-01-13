@@ -58,7 +58,7 @@ exit
 ```
 ___
 ___
-[^1]: For further leverage, commands could be executed as subshells ``` su -c '$COMMAND'``` so they can be monitored and cancelled if they become corrupted. also, making sure you're disconnected from the internet vastly shrinks the attack surface.
+[^1]: For further leverage, commands could be executed as subshells by a minimally privelaged user, so they can be monitored and cancelled if they become corrupted. also, making sure to be disconnected from the internet vastly shrinks the attack surface.
 
 [^2]: Assuming your current installation is clean, of course; a virus which was already in your operating system or on your PC's firmware could potentially find a way to access the files on the drive without your knowledge, or even exploit a known bug in the hard drive's firmware to do something. But in that case, I don't see how it matters, since it's already broken.
 
