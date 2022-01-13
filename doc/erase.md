@@ -36,7 +36,7 @@ If you want to take extra measures to isolate the contents of the drive you are 
 
 First, think about what is active and running on your system. if you login directly to a tty and then su, then chroot, then you are in the only authenticated interactive shell running while you access the device, and there is no way to pass commands out of the chroot back to the root user. at this point any malicious code would only have access to whatever tools you have installed there. In the worst case you could power down your computer without risk of privelage escalation, if you somehow lost the ability to exit the chroot. 
 
-However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks[^1]. The only class of viruses that would be effective[^2] from an unmounted drive would be firmware-based[^3], which would require foreknowledge, physical presence, tools, and expertise.
+However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks.[^1] The only class of viruses that would be effective[^2] from an unmounted drive would be firmware-based,[^3] which would require foreknowledge, physical presence, tools, and expertise.
 
 from the initial login shell:
 ```
