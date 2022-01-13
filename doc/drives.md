@@ -15,7 +15,7 @@
 
 Information about dual booting with another os depends on how they boot. dual booting with Windows is possible and less complicated than it might look [here](https://wiki.archlinux.org/title/Dual_boot_with_Windows). _grub_ can manage most modern systems. _rEFInd_ I believe is used with Mac OS for dual booting (more to come on those subjects in the future...).
 
-The default path here assumes you are using a single free (== unused and prepared to be ERASED) HD with an EFI system. One could fairly easily split things up between multiple drives; concepts such as encryption, LVM, and RAID however are more complex, and will require a firm grasp of the basics.
+__The default path here assumes__ you are using a single free (== unused and prepared to be ERASED) HD with an __EFI system__. One could fairly easily split things up between multiple drives; concepts such as encryption, LVM, and RAID however are more complex, and will require a firm grasp of the basics.
 
 ___
 
