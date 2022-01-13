@@ -11,3 +11,6 @@ encryption and proper system management are in general more useful for security 
 
 \[note: unless you are using something like Bitlocker and storing the key in the TPM, 
 disabling secure boot should not interfere with booting another OS, and re-enabling should restore TPM functionality\]
+
+See Rod's Books on EFI and secure boot for well written and detailed information about the situation.
+https://www.rodsbooks.com/efi-bootloaders/secureboot.html
