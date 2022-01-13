@@ -35,7 +35,7 @@ a) the type of drive you are using:
 * non-volatile memory express (NVMe) are NAND flash memory
   * SSD packaged for PCIe slots
   * with maximum I/O speed
-  * with varying levels of built in hardware encryption
+  * with varying levels of built-in hardware encryption
 
 and<br>
 b) the type of firmware your computer has available:
