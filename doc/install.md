@@ -24,7 +24,7 @@ any extra partitions can be mounted based on the location and type of user permi
 some info on user mounts and FSTAB options:<br>
 https://superuser.com/questions/320415/mount-device-with-specific-user-rights
 
-(note that user-id mounts via FSTAB are not available for ext4, so a better solution may be to add a runit start service with the correct mount command)
+(note that user-id mounts via FSTAB are not available for ext4, so a better solution may be to add a _runit_ "start" service with the correct _mount_ command)
 
 some notes on security via mount options [here](https://wiki.archlinux.org/title/Security#Mount_options)
 
