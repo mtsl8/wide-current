@@ -36,7 +36,7 @@ If you want to take extra measures to isolate the contents of the drive you are 
 
 First, think about what is active and running on your system. if you login directly to a tty and then su, then chroot, then you are in the only authenticated interactive shell running while you access the device, and there is no way to pass commands out of the chroot back to the root user. at this point any malicious code would only have access to whatever tools you have installed there. In the worst case you could power down your computer without risk of privelage escalation, if you somehow lost the ability to exit the chroot. 
 
-However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks.[^1] The only class of viruses that would be effective[^2] from an unmounted drive would be firmware-based,[^3] which would require foreknowledge, physical presence, tools, and expertise.
+However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks.[^1] (_The only class of viruses that would be effective[^2] from an unmounted drive would be firmware-based,[^3] which would require foreknowledge, physical presence, tools, and expertise._)
 
 from the initial login shell:
 ```
@@ -58,8 +58,8 @@ exit
 ```
 ___
 ___
-[^1]: For further leverage, commands could be executed as subshells by a minimally privelaged user, so they can be monitored and cancelled if they become corrupted. also, making sure to be disconnected from the internet vastly shrinks the attack surface.
+[^1]: For further leverage, commands could be executed in shubshells by a minimally privelaged user, so they can be monitored and cancelled if they become corrupted. also, making sure to be disconnected from the internet vastly shrinks the attack surface.
 
-[^2]: Assuming your current installation is clean, of course; a virus which was already in your operating system or on your PC's firmware could potentially find a way to access the files on the drive without your knowledge, or even exploit a known bug in the hard drive's firmware to do something. But in that case, I don't see how it matters, since it's already broken.
+[^2]: Assuming your current installation is clean, of course; a virus which was already in your operating system or on your PC's firmware could potentially find a way to access the files on the drive without your knowledge, or even exploit a known bug in the hard drive's firmware to do something. In that case though it wouldn't much matter, since the system is already corrupted - unless of course the bug was intentionally lying in wait.. again, above my paygrade.
 
 [^3]: It would require a sophisticated virus embedded in the hard drive's BIOS to cause any problems; assuming the only commands to be run which interact with the drive are to query the bus (lsblk) and to write random meaningless data (openssl|pv), neither of which request to read or execute data from the filesystems on the drive. Likewise, SSD related commands for erasure are directed at the _operating system_ of the hard drive, not the _filesystems_ it contains. There is no normal means by which information could jump from the filesystem to the ROM; it would have to be manually, physically installed using a ROM flashing device, inside the case of the drive, reverse engineered to the specific make and model, and any software mistakes would likely render the drive nonfunctional (assuming there is enough extra room on the chip to do something nefarious with).
