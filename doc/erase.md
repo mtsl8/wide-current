@@ -49,7 +49,7 @@ basestrap $JAIL util-linux pv
 mount --bind $JAIL $JAIL
 artix-chroot $JAIL
 
-### attach drive
+### connect drive
 ### erase drive
 
 exit
