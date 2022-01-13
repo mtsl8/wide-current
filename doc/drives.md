@@ -103,6 +103,8 @@ one could use a seperate partition or drive for audio and yet another larger one
 
 NVMe devices will show up under /dev/nvme* instead of /dev/sd*, and use namespaces instead of partitions. The tool _nvme-cli_ can be used to manage namespaces (more info [here](https://wiki.archlinux.org/title/Solid_state_drive/NVMe).)
 
+_gparted_ is a GTK front-end (GUI) for _parted_
+
 _parted_ is a more scriptable and modern tool wich will be used in the future. 
 
 _cfdisk_ I have tried and had issues with, perhaps others like it.
