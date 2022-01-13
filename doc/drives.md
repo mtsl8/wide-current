@@ -118,7 +118,7 @@ fdisk $HD
 # or whichever partition tool you want to use..
 # (new GPT table)
 # ...
-# BOOT: 100M efi/esp/boot (linux filesystem for MBR)
+# BOOT: 100M efi|esp|boot (linux filesystem for MBR)
 # SWAP: 4G linux swap
 # ROOT: 40G linux root
 # HOME: 100G linux filesystem
