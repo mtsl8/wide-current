@@ -58,7 +58,7 @@ exit
 ```
 ___
 ___
-[^1]: For further leverage, commands could be executed in shubshells by a minimally privelaged user, so they can be monitored and cancelled if they become corrupted. also, making sure to be disconnected from the internet vastly shrinks the attack surface.
+[^1]: For further leverage, commands could be executed in shubshells by a minimally privelaged user, so they can be monitored and cancelled if they become corrupted. also, making sure to be disconnected from the internet vastly shrinks the attack surface. removing extra tty/getty's (login shells) could also limit the attack surface, in the event that some login credentials happened to be compromised.
 
 [^2]: Assuming your current installation is clean, of course; a virus which was already in your operating system or on your PC's firmware could potentially find a way to access the files on the drive without your knowledge, or even exploit a known bug in the hard drive's firmware to do something. In that case though it wouldn't much matter, since the system is already corrupted - unless of course the bug was intentionally lying in wait.. again, above my paygrade.
 
