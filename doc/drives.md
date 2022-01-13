@@ -109,7 +109,7 @@ _parted_ is a more scriptable and modern tool (which will be used in future iter
 
 _cfdisk_ I have tried and had issues with, perhaps others like it.
 
-_fdisk_ is the old standard. it is interactive and provides a help menu to explain the commands available. basically, you choose a table type (MBR/GPT), create the partitions, change their type if needed, then finally write the table to the disk. for partition number and start point, usually accepting the default by pressing enter is recommended. to denote endpoint(=size), the syntax +500M or +100G (for example) is used.
+_fdisk_ is the old standard. it is interactive and provides a help menu to explain the commands available. basically, you choose a table type (MBR/GPT), create the partitions, change their type if needed, then finally write the table to the disk. for partition number and start point, usually accepting the default by pressing enter is recommended. to denote endpoint(=size), the syntax ```+500M``` or ```+100G``` (for example) is used.
 
 replace "X" in "sdX" with the letter of the drive you are working on:
 ```
@@ -131,7 +131,7 @@ EFI system partition must be FAT; FAT 16 has a limited max size so FAT 32 is usu
 
 ext4 is used as a general filesystem; it is the modern linux default.
 
-"e2label $PARTITION $LABEL" can be used to re-label ext filesystems after the fact.
+```e2label $PARTITION $LABEL``` can be used to re-label ext filesystems after the fact.
 
 ```
 mkfs.fat -F 32 "$HD"1
