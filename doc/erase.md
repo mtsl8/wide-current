@@ -29,14 +29,14 @@ ___
 
 If you want to take extra measures to isolate the contents of the drive you are erasing from a working (installed) system, here are two options:
 * software: create a chroot jail (or some kind of virtual container) with the minimum toolset required to sanitize the drive
-* hardware: use an installer ISO on a removable flash drive as a drive utility
-  * for added security, unplug your other drives
+* hardware: use an installer ISO on a removable flash drive as a drive utility with any PC
+  * for added security, unplug any other drives
 
 #### chroot jail:
 
-first, think about what is active and running on your system. if you login directly to a tty and then su, then chroot, then you are in the only authenticated interactive shell running while you access the device, and there is no way to pass commands out of the chroot back to the root user. at this point any malicious code[^1] would only have access to whatever tools you have placed there, and in the worst case you could power down your computer if you somehow lost the ability to exit the chroot - without any risk of privelage escalation.
+First, think about what is active and running on your system. if you login directly to a tty and then su, then chroot, then you are in the only authenticated interactive shell running while you access the device, and there is no way to pass commands out of the chroot back to the root user. at this point any malicious code would only have access to whatever tools you have installed there. In the worst case you could power down your computer without risk of privelage escalation, if you somehow lost the ability to exit the chroot. 
 
-However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks.
+However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks[^1]. The only class of viruses that would be effective[^2] from an unmounted drive would be firmware-based[^3], which would require foreknowledge, physical presence, tools, and expertise.
 
 from the initial login shell:
 ```
@@ -58,5 +58,8 @@ exit
 ```
 ___
 ___
-___
-[^1]: it would have to be a very sophisticated firmware-based virus embedded in the hard drive's BIOS to make any headway at all; assuming the only commands to be run which interact with the drive are to query the bus (lsblk) and to write random meaningless data (openssl|pv), neither of which request to read or execute data from the filesystems on the drive. Likewise, SSD related commands for erasure are directed at the _operating system_ of the hard drive, not the _filesystems_ it contains. There is no normal means by which information could jump from the filesystem to the ROM; it would have to be manually, physically installed using a ROM flashing device, inside the case of the drive, and any software mistakes would likely render the drive nonfunctional (assuming there is even enough extra room on the chip to do something nefarious).
+[^1]: For further leverage, commands could be executed as subshells ``` su -c '$COMMAND'``` so they can be monitored and cancelled if they become corrupted. also, making sure you're disconnected from the internet vastly shrinks the attack surface.
+
+[^2]: Assuming your current installation is clean, of course; a virus which was already in your operating system or on your PC's firmware could potentially find a way to access the files on the drive without your knowledge, or even exploit a known bug in the hard drive's firmware to do something. But in that case, I don't see how it matters, since it's already broken.
+
+[^3]: It would require a sophisticated virus embedded in the hard drive's BIOS to cause any problems; assuming the only commands to be run which interact with the drive are to query the bus (lsblk) and to write random meaningless data (openssl|pv), neither of which request to read or execute data from the filesystems on the drive. Likewise, SSD related commands for erasure are directed at the _operating system_ of the hard drive, not the _filesystems_ it contains. There is no normal means by which information could jump from the filesystem to the ROM; it would have to be manually, physically installed using a ROM flashing device, inside the case of the drive, and any software mistakes would likely render the drive nonfunctional (assuming there is even enough extra room on the chip to do something nefarious).
