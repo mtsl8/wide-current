@@ -78,7 +78,7 @@ Deciding how much to allocate for what depends on what you want to do with the s
 
 #### boot
 
-Using a small EFI __boot__ partition is possible as long as you store your kernels on the __root__ partition, which is wide-default. Some older UEFI implementations have issues if you make it too small - see [here](https://www.rodsbooks.com/efi-bootloaders/principles.html) - so 550M is a good safe number. If you are using BIOS/MBR you don't need a seperate __boot__ partition, but it can make things easier for encryption or for multi-booting different operating systems<br>
+Using a small EFI __boot__ partition is possible as long as you store your kernels on the __root__ partition, which is wide-default. Some older UEFI implementations have issues if you make it too small - see [here](https://www.rodsbooks.com/efi-bootloaders/principles.html) - so 550M is a good safe number. If you are using BIOS/MBR you don't need a seperate __boot__ partition, but it can make things easier for encryption or for multi-booting different operating systems. In those cases, it will need to be big enough to store the bootloader & config, and any kernels to be booted. for reference, on a default efi/zen install the bootlaoder is 152K and the /boot folder is 161M.
 
 #### swap
 
