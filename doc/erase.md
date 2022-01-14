@@ -46,7 +46,7 @@ sudo su
 JAIL="/mnt/chroot"
 mkdir -p $JAIL
 basestrap $JAIL util-linux pv
-#optionally disconnect from internet
+# optionally disconnect from internet
 artix-chroot $JAIL
 
 ### connect drive
