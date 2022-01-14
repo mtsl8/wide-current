@@ -37,6 +37,9 @@ any additions or modifications can be made to the FSTAB after using "fstabgen" t
 dhcpcd && ping -w 5 -c 10 widemage.net
 ```
 ### install
+
+select the microcode package that matches your processor (intel-ucode | amd-ucode)
+
 ```
 basestrap /mnt base base-devel runit elogind-runit 
 basestrap /mnt linux-zen linux-firmware {intel|amd}-ucode
