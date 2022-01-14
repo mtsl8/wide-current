@@ -1,7 +1,7 @@
  - - - the latter part of this is written for using modern nvidia drivers, but the first part is the same for all - - -
  
 ## unless clearly defined in the present script, generally assume that $values are to be replaced by your personal values.
-## variables included: $Region $City $user $pass $hostname
+## variables included: $region $zone $user $pass $hostname
 
 ## intended file contents surrounded by ```triple backticks```
 
@@ -33,8 +33,8 @@ nftables-runit firewalld-runit
 alsa-utils-runit
 
 ~~~ chroot.sh:
-
-ln -sf /usr/share/zoneinfo/$Region/$City /etc/localtime
+# ls can be used to see which regions and zones are available in the zoneinfo folder
+ln -sf /usr/share/zoneinfo/$region/$zone /etc/localtime
 hwclock --systohc
 nano /etc/locale.gen 
 # page down, uncomment: en_US.UTF-8
@@ -84,7 +84,7 @@ alias grubpdate="sudo grub mkconfig -o /boot/grub/grub.cfg"
 
 man-db man-pages
 
-pacman-contrib pkgfile
+pacman-contrib pkgfile 
 
 # run "pkgfile --update" at any time to refresh the database.
 
@@ -94,9 +94,13 @@ python dkms
 
 linux-zen-headers
 
-~~~
-
 cairo mesa
+
+- - - if you are using a different graphics card, this it where it starts to be different - - -
+
+# hardware acceleration drivers for intel graphics are different;
+# nvidia-utils provides VDPAU/NVDECODE/NVENCODE for modern nvidia gpus
+# the follwing pair is used by novueau (open source nvidia) and amd/ati graphics:
 
 mesa-vdpau libva-mesa-driver
 
@@ -104,12 +108,19 @@ wayland egl-wayland
 
 libinput libepoxy
 
-- - - if you are using a different graphics card, this it where it starts to be different; - - -
 # xorg-server may not be needed depending on what environment and applications are desired
-# wayland is a more modern protocol, and xwayland can supplement; 
-# it depends on xorg-server-common instead, a small library.
+# wayland is a more modern protocol, and xwayland can supplement;
+# it depends on xorg-server-common instead of xorg-server, a small library.
+# wayland is a protocol, and requires a compositor to function;
+# wlroots is the most widely used compositor; see window managers
+# here: https://wiki.archlinux.org/title/Wayland for more details.
+# also see /doc/graphics-future.md for more context.
 
 xorg-server
+
+# if you are not using nvidia the rest is not applicable;
+# if you are using an old nvidia, there may be some overlap;
+# see https://wiki.archlinux.org/title/Xorg#Driver_installation
 
 nvidia-utils
 
