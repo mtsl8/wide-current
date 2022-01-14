@@ -1,4 +1,6 @@
-# packages to install denoted by "> package"
+## the following assumes xorg-server is being used
+
+## packages to install denoted by "> package"
 
 > lcms2
 > pango
