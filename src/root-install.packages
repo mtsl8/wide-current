@@ -1,11 +1,16 @@
  - - - the latter part of this is written for using modern nvidia drivers, but the first part is the same for all - - -
+ 
+## unless clearly defined in the present script, generally assume that $values are to be replaced by your personal values.
+## variables included: $Region $City $user $pass $hostname
+
+## intended file contents surrounded by ```triple backticks```
 
 #partition
 #format/label
 #mount
 #dhcpcd/ping
 
-~~~ #basestrap
+~~~ basestrap /mnt:
 
 base base-devel runit elogind-runit
 
@@ -15,7 +20,7 @@ linux-zen linux-firmware intel-ucode
 
 fstabgen -U /mnt >> /mnt/etc/fstab && artix-chroot /mnt
 
-~~~ pacman -S
+~~~ pacman -S:
 
 nano sudo
 
@@ -31,33 +36,57 @@ alsa-utils-runit
 
 ln -sf /usr/share/zoneinfo/$Region/$City /etc/localtime
 hwclock --systohc
-# /etc/locale.gen ~ (uncomment en_US.UTF-8)
+nano /etc/locale.gen 
+# page down, uncomment: en_US.UTF-8
 locale-gen
-# /etc/locale.conf ~(export LANG="en_US.UTF-8" ; export LC_COLLATE="C")
-grub-install --target=x86_64-efi --efi-directory=/efi --bootloader=grub	
+nano /etc/locale.conf
+```
+export LANG="en_US.UTF-8"
+export LC_COLLATE="C"
+```
+grub-install --target=x86_64-efi --efi-directory=/efi --bootloader=grub
+# for BIOS/MBR: grub-install --target=i386-pc $HD
 grub-mkconfig -o /boot/grub/grub.cfg
 passwd
 useradd -m $user
 passwd $user
 gpasswd -a $user wheel
 EDITOR="nano" visudo
-# uncomment line allowing wheel
+# uncomment line allowing wheel (with password)
 ## note: the finer grain of control used in the sudo file the better for security
-## in some cases creating a utility user limited to specific tasks is a useful strategy
-## (an alternative is doas, but there are a lot of things which like sudo, so...)
-# /etc/hostname ~($hostname)
-# /etc/hosts ~(127.0.0.1 localhost ; ::1 localhost ; 127.0.1.1 $hostname.localdoman $hostname)
+## in some cases creating utility users limited to specific tasks is a useful strategy
+## (an alternative to sudo is doas, but there are a lot of things which use sudo, so...)
+nano /etc/hostname
+```
+$hostname
+```
+# nano /etc/hosts
+```
+127.0.0.1 localhost
+::1 localhost 
+127.0.1.1 $hostname.localdoman $hostname
+```
 ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/nftables /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/firewalld /etc/runit/runsvdir/default
-# ^patch: add ">/dev/null" before "2&>1" in start file to remove annoying text at login. probably a silly hack lol
+# ^patch: add ">/dev/null" before "2&>1" in "/etc/runit/sv/firewalld/run" file to remove annoying text at login. 
+## note: there is probably a better way to do that, and not necessary with display manager
 ln -s /etc/runit/sv/alsa /etc/runit/runsvdir/default
 
-~~~ reboot, then install:
+nano /home/$user/.bashrc
+```
+alias pagman="sudo pacman -S"
+alias grubpdate="sudo grub mkconfig -o /boot/grub/grub.cfg"
+```
+
+~~~ the system is now stable!
+~~~ reboot, login, then install:
 
 man-db man-pages
 
 pacman-contrib pkgfile
+
+# run "pkgfile --update" at any time to refresh the database.
 
 libedit llvm-libs
 
@@ -87,8 +116,6 @@ nvidia-utils
 nvidia-dkms
 
 ~~~ config.sh:
-
-pkgfile --update
 
 # /etc/pacman.d/hooks/nvidia.hook ~ (https://wiki.archlinux.org/title/NVIDIA#pacman_hook)
 
