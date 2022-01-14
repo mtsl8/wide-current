@@ -33,45 +33,54 @@ nftables-runit firewalld-runit
 alsa-utils-runit
 
 ~~~ chroot.sh:
+
 # ls can be used to see which regions and zones are available in the zoneinfo folder
 ln -sf /usr/share/zoneinfo/$region/$zone /etc/localtime
 hwclock --systohc
+
 nano /etc/locale.gen 
 # page down, uncomment: en_US.UTF-8
+
 locale-gen
+
 nano /etc/locale.conf
 ```
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"
 ```
+
 grub-install --target=x86_64-efi --efi-directory=/efi --bootloader=grub
 # for BIOS/MBR: grub-install --target=i386-pc $HD
 grub-mkconfig -o /boot/grub/grub.cfg
+
 passwd
 useradd -m $user
 passwd $user
 gpasswd -a $user wheel
 EDITOR="nano" visudo
 # uncomment line allowing wheel (with password)
-## note: the finer grain of control used in the sudo file the better for security
+## note: the finer grain of control used in the sudoers file, the better for security
 ## in some cases creating utility users limited to specific tasks is a useful strategy
 ## (an alternative to sudo is doas, but there are a lot of things which use sudo, so...)
+
 nano /etc/hostname
 ```
 $hostname
 ```
+
 # nano /etc/hosts
 ```
 127.0.0.1 localhost
 ::1 localhost 
 127.0.1.1 $hostname.localdoman $hostname
 ```
+
+ln -s /etc/runit/sv/alsa /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/connmand /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/nftables /etc/runit/runsvdir/default
 ln -s /etc/runit/sv/firewalld /etc/runit/runsvdir/default
 # ^patch: add ">/dev/null" before "2&>1" in "/etc/runit/sv/firewalld/run" file to remove annoying text at login. 
 ## note: there is probably a better way to do that, and not necessary with display manager
-ln -s /etc/runit/sv/alsa /etc/runit/runsvdir/default
 
 nano /home/$user/.bashrc
 ```
