@@ -30,6 +30,8 @@ https://superuser.com/questions/320415/mount-device-with-specific-user-rights
 
 some notes on security via mount options [here](https://wiki.archlinux.org/title/Security#Mount_options)
 
+any additions or modifications can be made to the FSTAB after using "fstabgen" to create it.
+
 ### connect
 ```
 dhcpcd && ping -w 5 -c 10 widemage.net
