@@ -60,13 +60,14 @@ nano ~/.xinitrc
 > vlc
 
 sudo nano /etc/pacman.conf
+# insert near the end of the file, where the repos are listed:
 ```
 [universe]
 Server = https://universe.artixlinux.org/$arch
 ```
 
 > librewolf
-# web browser
+# web browser; for alternatives see /doc/web.md
 
 ~~~ build alacritty:
 
