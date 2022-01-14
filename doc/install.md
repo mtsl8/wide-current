@@ -6,11 +6,13 @@
 swapon "$HD"2
 mount "$HD"3 /mnt
 
-# for efi:
+# if [ EFI ] {
 mkdir /mnt/efi
 mount "$HD"1 /mnt/efi
-# for bios:
+# } else if [ BIOS ] {
+mkdir /mnt/boot
 mount "$HD"1 /mnt/boot
+# } fi
 
 mkdir /mnt/home
 mount "$HD"4 /mnt/home
