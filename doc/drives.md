@@ -130,12 +130,23 @@ HD="/dev/sdX"
 fdisk $HD
 
 # or whichever partition tool you want to use..
+
+# EFI example:
 # (new GPT table)
 # ...
-# BOOT: 100M efi|esp|boot (linux filesystem for MBR)
+# BOOT: 100M efi|esp
 # SWAP: 4G linux swap
 # ROOT: 40G linux root
 # HOME: 100G linux filesystem
+
+# BIOS example:
+# (new MBR table)
+# ...
+# BOOT: 300M linux filesystem (optional) 
+# SWAP: 8G linux swap
+# ROOT: 40G linux root
+# HOME: 100G linux filesystem
+
 ```
 ### format
 
