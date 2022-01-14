@@ -93,3 +93,5 @@ gzip -c extra/alacritty-msg.man | sudo tee /usr/local/share/man/man1/alacritty-m
 mkdir -p ~/.bash_completion
 cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
 echo ". ~/.bash_completion/alacritty" >> ~/.bashrc
+
+# todo: how to replace xfce4-terminal as default?
