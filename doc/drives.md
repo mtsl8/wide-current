@@ -78,12 +78,14 @@ Deciding how much to allocate for what depends on what you want to do with the s
 
 Using a small EFI __boot__ partition is possible as long as you store your kernels on the __root__ partition, which is wide-default. Some older UEFI implementations have issues if you make it too small - see [here](https://www.rodsbooks.com/efi-bootloaders/principles.html) - so 550M is a good safe number. If you are using BIOS/MBR you don't need a seperate __boot__ partition, but it can make things easier for encryption or for multi-booting different operating systems<br>
 
-__swap__ partition is not mandatory but a backup for RAM and recommended on HDD's - a swap file can be used instead on SSD's (or just run swapless if you like living on the edge...) 
+__swap__ partition is not mandatory but a backup for RAM and recommended on HDD's - a swap file can be used instead on SSD's (or just run swapless if you like living on the edge...). The amount to use for swap (be it a partition or file) is calculated based on available RAM and expected system usage; on older systems with less RAM, swap becomes more critical for system stability. On modern systems with more/faster RAM, usually a few GB is more than enough, __unless__ you are consistently overflowing RAM __or__ want to be able to hibernate.
 
 * if you overflow RAM without swap in place, your system will crawl / hang / kernel panic.
-* swap can also be used for hibernation, in which case you need to allocate a bit more than the amount of used RAM in order to hibernate the RAM to the hard drive.
+* swap can also be used for hibernation, in which case you need to allocate a bit more than the amount of used RAM in order to hibernate the RAM to the hard drive. 
+  * for example, 18 GB swap on 12 GB RAM is more than enough. (the old "rule" of 2x RAM no longer makes sense in most cases. 1.2-1.5 more like..)
 * if you use encryption, consider the security implications of using unencrypted swap. (more info below)
-* keeping in mind SSD's limited write cycles, in those cases it is preferable to use a [swapfile](https://wiki.archlinux.org/title/Swap#Swap_file) and the hard drive's built in [TRIM](https://wiki.archlinux.org/title/Solid_state_drive#TRIM) with [_fstrim_](https://man.archlinux.org/man/fstrim.8) to rotate the drive, rather than burn out a fixed partition<br>
+
+keeping in mind __SSD__'s limited write cycles, in those cases it is preferable to use a [swapfile](https://wiki.archlinux.org/title/Swap#Swap_file) and the hard drive's built in [TRIM](https://wiki.archlinux.org/title/Solid_state_drive#TRIM) with [_fstrim_](https://man.archlinux.org/man/fstrim.8) to rotate the drive, rather than burn out a fixed partition<br>
 
 The __root__ partition can be (significantly) smaller than 40 if the system is light/minimal. I usually use 100 if the drive is big because .. why not?
 
