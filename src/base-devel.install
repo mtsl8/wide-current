@@ -34,7 +34,8 @@ MAKEFLAGS="-j$threads"
 
 #line121:
 #-- Destination: specify a fixed directory where all packages will be placed
-PKGDEST=$HOME/devel/repo/
+# PKGDEST=$HOME/devel/repo/
+# this does not do what is expected
 
 #line129:
 #-- Packager: name(/email) of the person or organization building packages
@@ -45,11 +46,10 @@ GPGKEY="$keyfile"
 
 ~~~ setup
 
-echo '
-##these two belong in an earlier script:
-alias grubpdate="sudo grub mkconfig -o /boot/grub/grub.cfg"
-alias pagman="sudo pacman -S"
+## because the above doesn't do what is expected, the following is broken
+## it also may be broken for other reasons
 
+echo '
 export REPODIR="$HOME/devel/repo/"
 export REPO="$REPODIR/local.db.tar.gz"
 
