@@ -14,7 +14,7 @@ __HDD__'s do not mind bit blasting at all, but it will take a while. /dev/urando
 
 \[note: if you are using an older kernel (<5.6) you may benefit from using _rng-tools_ (hardware-based) or _haveged_ (software-based) to increase entropy. to see available entropy: ```cat /proc/sys/kernel/random/entropy_avail``` \]
 
-replace "X" with the drive letter, and include a number "N" to target a specific partition. if the partition number is omitted the entire drive will be erased. many use _dd_, but _cat_ or _pv_ are naturally faster in most cases. _pv_ will display progress, _cat_ will not.
+replace "X" with the drive letter, and include a number "N" to target a specific partition. if the partition number is omitted the entire drive will be erased. many use _dd_, but _cat_ or _pv_ are naturally faster in most cases. _pv_ will display progress, _cat_ will not. (_pv_ is available via pacman)
 
 ```
 DEVICE="/dev/sdXN"
@@ -38,12 +38,15 @@ First, think about what is active and running on your system. if you login direc
 
 However, if the drive is not ever mounted, the filesystems are not connected or activated, and have no means by which to execute code in the running kernel. If you need to mount a drive you don't trust to recover data or run an executable file (application), that is where you start to open up more serious risks.[^1] (_The only class of viruses that would be effective from an unmounted drive[^2] would be firmware-based, which would require foreknowledge, physical presence, tools, and expertise to deploy.[^3]_)
 
+to execute the following commands, you will need to have the package _artools_ installed. basestrap is configured to pull packages from the internet; there are ways to copy them from the cache instead, but it's a bit more tricky. setting up a LAN cache server on another computer is an alternate solution.
+
 from the initial login shell:
 ```
 sudo su
 JAIL="/mnt/chroot"
 mkdir -p $JAIL
 basestrap $JAIL util-linux pv
+#optionally disconnect from internet
 artix-chroot $JAIL
 
 ### connect drive
