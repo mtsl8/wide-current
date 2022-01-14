@@ -159,8 +159,14 @@ ext4 is used as a general filesystem; it is the modern linux default.
 ```e2label $PARTITION $LABEL``` can be used to re-label ext filesystems after the fact.
 
 ```
+# EFI:
 mkfs.fat -F 32 "$HD"1
 fatlabel "$HD"1 BOOT
+
+# BIOS:
+mkfs.ext4 -L BOOT "$HD"1
+
+# both:
 mkswap -L SWAP "$HD"2 
 mkfs.ext4 -L ROOT "$HD"3
 mkfs.ext4 -L HOME "$HD"4
