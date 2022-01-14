@@ -44,14 +44,12 @@ sudo su
 JAIL="/mnt/chroot"
 mkdir -p $JAIL
 basestrap $JAIL util-linux pv
-mount --bind $JAIL $JAIL
 artix-chroot $JAIL
 
 ### connect drive
 ### erase drive
 
 exit
-umount $JAIL
 # optionally remove (or shred) the chroot
 rm -rf $JAIL
 exit
