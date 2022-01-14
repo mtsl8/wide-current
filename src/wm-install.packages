@@ -40,11 +40,16 @@ nano ~/.xinitrc
 > mousepad
 # nice gui text editor
 
-#/etc/i3/config -> ~/.config/i3/config ; comment out extra stuff, set terminal and bemenu-run <br>
-(note "-" and not "_" as in dmenu_run)
+## on first run follow the prompts for initial setup;
+## Meta+Enter opens terminal; Meta+d runs launcher
+# launch a terminal:
 
-## follow the prompts; cmd+enter opens terminal; cmd+d opens menu; 
-## see [videos](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf) for intro on how to do stuff
+nano ~/.config/i3/config
+#comment out extra stuff, set terminal and replace demenu_run with bemenu-run (note "-" and not "_")
+
+## Meta+{left,right} moves between open windows; Meta+Shift+{left,right} drags open windows
+## Ctrl+Shift+q is the default to close a window; Ctrl+Shift+e is the default to exit i3
+## see [videos](https://www.youtube.com/playlist?list=PL5ze0DjYv5DbCv9vNEzFmP6sU7ZmkGzcf) for details on how to do stuff
 
 ~~~ type "startx" to run chosen desktop
 
