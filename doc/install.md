@@ -39,3 +39,8 @@ basestrap /mnt linux-zen linux-firmware {intel|amd}-ucode
 ```
 * [root-install](/src/root-install.packages)
 * [wm-install](/src/wm-install.packages)
+
+### tips
+
+* keyboard shortcuts
+* general context
