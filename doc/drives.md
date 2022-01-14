@@ -154,6 +154,8 @@ EFI system partition must be FAT; FAT 16 has a limited max size so FAT 32 is usu
 
 ext4 is used as a general filesystem; it is the modern linux default.
 
+(if using BIOS/MBR with a seperate __boot__ partition, ext4 can also be used for that. FAT is simpler and therefore easier for an EFI bootloader to read; but ext4 contains built-in journaling, which can help protect filesystems during crashes)
+
 ```e2label $PARTITION $LABEL``` can be used to re-label ext filesystems after the fact.
 
 ```
