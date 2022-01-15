@@ -58,7 +58,7 @@ nano ~/.config/i3/config
 # see https://github.com/Breaeth/ly-void-2022 for best lead on display manager
 # runit directory in artix kept in /run/runit/service - adjust acordingly
 
-# in i3 use Meta-Enter to open a terminal
+# in i3 use Meta+Enter to open a terminal
 # in xfce4 use Ctrl+Alt+T to open a terminal
 
 > pulseaudio
@@ -80,6 +80,7 @@ Server = https://universe.artixlinux.org/$arch
 ~~~ build alacritty:
 
 # quality modern terminal emulator written in rust
+# https://alacritty.org/
 
 > cmake
 > git
@@ -94,12 +95,15 @@ cargo build --release
 
 sudo cp /target/release/alacritty /usr/local/bin/alacritty
 
+# man pages:
 sudo mkdir -p /usr/local/share/man/man1
 gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
 gzip -c extra/alacritty-msg.man | sudo tee /usr/local/share/man/man1/alacritty-msg.1.gz > /dev/null
 
+# bash completion:
 mkdir -p ~/.bash_completion
 cp extra/completions/alacritty.bash ~/.bash_completion/alacritty
 echo ". ~/.bash_completion/alacritty" >> ~/.bashrc
+# note: other shell completions available, see website
 
 # todo: how to replace xfce4-terminal as default?
