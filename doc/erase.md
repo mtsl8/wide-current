@@ -4,7 +4,7 @@ The two main reasons to erase the drive are to delete the old data or to prepare
 
 ___
 
-__NAND__ memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces their lifespan. It can be done, and sometimes makes sense, but more often these days there will be some built-in functionality that is preferred. More sophisticated devices have built-in harware encryption made for the drive; buy [those](https://wiki.archlinux.org/title/Self-encrypting_drives) / use that when you can. It's not actually too pricey for top shelf NVMe, and will do the thing the fastest and easiest (essentially all you have to do is revoke the final key, rendering your data an unencryptable mess).
+__NAND__ memory (flash, SSD, NVMe) does not enjoy being bit blasted; it reduces their lifespan. It can be done, and sometimes makes sense, but more often these days there will be some built-in functionality that is preferred. More sophisticated devices have built-in harware encryption made for the drive; buy [those](https://wiki.archlinux.org/title/Self-encrypting_drives) / use that when you can. It's not actually too pricey for top shelf NVMe, and will do the thing the fastest and easiest (essentially all you have to do is revoke the final key, rendering your data an undecryptable mess).
 
 If you have a drive without that capability, there are a few options. To delete all block references in the SSD, without resetting the memory itself, use: ```blkdiscard $DEVICE```. In order to do a full factory reset, see [here](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing) (check nearby pages if that doesn't cover your drive). _There is a fair bit of complication in this department, due to the varying levels of hardware support._
 
