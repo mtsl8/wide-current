@@ -45,7 +45,7 @@ from the initial login shell:
 sudo su
 JAIL="/mnt/chroot"
 mkdir -p $JAIL
-basestrap $JAIL util-linux pv
+basestrap $JAIL util-linux pv openssl
 # optionally disconnect from internet
 artix-chroot $JAIL
 
